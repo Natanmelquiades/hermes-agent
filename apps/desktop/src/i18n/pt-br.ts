@@ -477,7 +477,7 @@ export const ptBrOverrides: TranslationOverrides = {
         'Reações com emoji no estilo iMessage — reaja às mensagens, e o Hermes também pode reagir às suas.',
       embedsTitle: 'Conteúdo incorporado',
       embedsDesc:
-        'As prévias ricas carregam de sites de terceiros (YouTube, X, …). A opção “Perguntar” mostra um espaço reservado até você liberar cada uma; “Sempre” carrega automaticamente; “Desativado” mantém apenas links simples.',
+        'As prévias ricas carregam conteúdo de sites de terceiros (YouTube, X, …). A opção “Perguntar” mostra um espaço reservado até você liberar cada uma; “Sempre” carrega automaticamente; “Desativado” mantém apenas links simples.',
       embedsAsk: 'Perguntar',
       embedsAlways: 'Sempre',
       embedsOff: 'Desativado',
@@ -814,8 +814,8 @@ export const ptBrOverrides: TranslationOverrides = {
       never: 'nunca',
       justNow: 'agora mesmo',
       minAgo: count => `${count} min atrás`,
-      hoursAgo: count => `${count} horas atrás`,
-      daysAgo: count => `${count} dias atrás`
+      hoursAgo: count => `${count} ${count === 1 ? 'hora' : 'horas'} atrás`,
+      daysAgo: count => `${count} ${count === 1 ? 'dia' : 'dias'} atrás`
     },
     config: {
       none: 'Nenhum',
@@ -1479,9 +1479,9 @@ export const ptBrOverrides: TranslationOverrides = {
       retry: 'Tentar de novo',
       hatch: 'Chocar',
       spawning: 'Criando…',
-      hatching: 'Chocando o seu mascote…',
+      hatching: 'Seu mascote está saindo do ovo…',
       hatchingSub: 'Dando vida a ele…',
-      hatched: 'Chocou!',
+      hatched: 'Seu mascote saiu do ovo!',
       hatchRow: (_state, done, total) => `Desenhando o quadro ${done} de ${total}…`,
       hatchComposing: 'Juntando tudo…',
       hatchSaving: 'Quase lá…',
@@ -1683,9 +1683,9 @@ export const ptBrOverrides: TranslationOverrides = {
     revokeAria: name => `Revogar ${name}`,
     revokeTitle: 'Revogar acesso',
     revokeDesc: (name: string) => `${name} perderá o acesso e deixará de ser reconhecido a partir da próxima mensagem.`,
-    approvedUser: name => `${name} aprovado`,
+    approvedUser: name => `Acesso aprovado para ${name}`,
     approvedHint: 'Será reconhecido automaticamente na próxima mensagem.',
-    revokedUser: name => `${name} revogado`,
+    revokedUser: name => `Acesso revogado para ${name}`,
     failedApprove: name => `Falha ao aprovar ${name}`,
     failedRevoke: name => `Falha ao revogar ${name}`,
     pairingLockedOut:
@@ -1713,7 +1713,7 @@ export const ptBrOverrides: TranslationOverrides = {
       DISCORD_REPLY_TO_MODE: { label: 'Estilo de resposta', help: 'first, all ou off.' },
       DISCORD_ALLOW_ALL_USERS: {
         label: 'Permitir todos os usuários do Discord',
-        help: 'Apenas para desenvolvimento. Quando verdadeiro, qualquer pessoa pode mandar DM para o bot sem lista de permissões.'
+        help: 'Apenas para desenvolvimento. Quando definido como verdadeiro, qualquer pessoa pode mandar DM para o bot sem lista de permissões.'
       },
       DISCORD_HOME_CHANNEL: {
         label: 'ID do canal principal',
@@ -1725,7 +1725,7 @@ export const ptBrOverrides: TranslationOverrides = {
       },
       BLUEBUBBLES_ALLOW_ALL_USERS: {
         label: 'Permitir todos os usuários do iMessage',
-        help: 'Quando verdadeiro, ignora a lista de permissões do BlueBubbles.'
+        help: 'Quando definido como verdadeiro, ignora a lista de permissões do BlueBubbles.'
       },
       MATTERMOST_ALLOW_ALL_USERS: { label: 'Permitir todos os usuários do Mattermost' },
       MATTERMOST_HOME_CHANNEL: { label: 'Canal principal' },
@@ -1791,7 +1791,7 @@ export const ptBrOverrides: TranslationOverrides = {
     empty: 'Nenhuma assinatura de webhook ainda.',
     disabledTitle: 'Receptor de webhooks desativado',
     disabledBody:
-      'Os webhooks são uma plataforma própria do gateway. Ative-os aqui para aceitar eventos HTTP recebidos; canais de conversa só são necessários quando uma assinatura entrega no Telegram, Discord, Slack ou outro canal.',
+      'Os webhooks são uma plataforma própria do gateway. Ative-os aqui para aceitar eventos HTTP recebidos; canais de conversa só são necessários quando uma assinatura entrega mensagens no Telegram, Discord, Slack ou outro canal.',
     enable: 'Ativar webhooks',
     enabling: 'Ativando...',
     enabled: (name: string) => `Ativado: "${name}"`,
@@ -1825,7 +1825,7 @@ export const ptBrOverrides: TranslationOverrides = {
     fieldDescription: 'Descrição',
     fieldDescriptionPlaceholder: 'O que este webhook faz (opcional)',
     fieldEvents: 'Eventos',
-    fieldEventsPlaceholder: 'separados por vírgula, deixe vazio para todos',
+    fieldEventsPlaceholder: 'separados por vírgula; deixe vazio para incluir todos',
     fieldSkills: 'Habilidades',
     fieldSkillsPlaceholder: 'nomes de habilidades separados por vírgula (opcional)',
     fieldDeliver: 'Entregar em',
@@ -2692,7 +2692,7 @@ export const ptBrOverrides: TranslationOverrides = {
     },
     backToSignIn: 'Voltar ao login',
     getKey: 'Obter uma chave',
-    replaceCurrent: 'Substituir Atual valor',
+    replaceCurrent: 'Substituir valor atual',
     pasteApiKey: 'Colar API chave',
     localApiKeyPlaceholder: 'Chave de API (opcional — só se o seu endpoint exigir)',
     couldNotSave: 'Não foi possível salvar a credencial.',
@@ -3198,7 +3198,7 @@ export const ptBrOverrides: TranslationOverrides = {
         ran: 'Executou',
         running: 'Executando',
         ranCode: 'Executou o código',
-        runningCode: 'Programando'
+        runningCode: 'Executando o código'
       },
       prefixes: {
         browser: 'Navegador',
@@ -3225,7 +3225,7 @@ export const ptBrOverrides: TranslationOverrides = {
         },
         browser_navigate: { done: 'Abriu a página', pending: 'Abrindo a página', pendingAction: 'Abrindo' },
         browser_snapshot: {
-          done: 'Capturou uma imagem do estado da página',
+          done: 'Capturou o estado da página',
           pending: 'Capturando o estado da página',
           pendingAction: 'Capturando'
         },
@@ -3238,7 +3238,7 @@ export const ptBrOverrides: TranslationOverrides = {
         clarify: { done: 'Fez uma pergunta', pending: 'Fazendo uma pergunta', pendingAction: 'Perguntando' },
         cronjob: { done: 'Tarefa de cron', pending: 'Agendando a tarefa de cron', pendingAction: 'Agendando' },
         edit_file: { done: 'Editou o arquivo', pending: 'Editando o arquivo', pendingAction: 'Editando' },
-        execute_code: { done: 'Executou o código', pending: 'Programando', pendingAction: 'Programando' },
+        execute_code: { done: 'Executou o código', pending: 'Executando o código', pendingAction: 'Executando' },
         image_generate: { done: 'Gerou a imagem', pending: 'Gerando a imagem', pendingAction: 'Gerando' },
         list_files: { done: 'Listou os arquivos', pending: 'Listando os arquivos', pendingAction: 'Listando' },
         memory: { done: 'Salvou na memória', pending: 'Salvando na memória', pendingAction: 'Salvando' },
@@ -3435,8 +3435,8 @@ const ptBrSupplement: TranslationOverrides = {
         includesHeading: 'Este pacote inclui',
         agentLabel: 'Plugin de agente',
         desktopLabel: 'Interface do Desktop',
-        agentTargetLocal: profile => `Instala no ${profile} local (~/.hermes/plugins/)`,
-        agentTargetRemote: profile => `Instala no ${profile} remoto conectado`,
+        agentTargetLocal: profile => `Instala no backend local “${profile}” (~/.hermes/plugins/)`,
+        agentTargetRemote: profile => `Instala no backend remoto conectado “${profile}”`,
         desktopTarget: 'Instala na pasta local desktop-plugins deste aplicativo',
         desktopOnlyNote: 'Pacotes exclusivos do Desktop não instalam um plugin de agente no backend.',
         insecureWarning: 'Esta URL usa um esquema inseguro ou local. Prefira https:// ou git@ para instalações de produção.',
@@ -3576,7 +3576,7 @@ const ptBrSupplement: TranslationOverrides = {
       deepLinkDescription: 'Um link solicitou a adição deste servidor MCP ao Hermes. Revise a configuração exata abaixo — ela vem do link, não do Hermes.',
       deepLinkStdioWarning: 'Este servidor executa um processo local na sua máquina com o comando mostrado abaixo. Continue somente se confiar na origem.',
       deepLinkConfirm: 'Adicionar servidor',
-      deepLinkNameInvalid: 'Os nomes usam de 1 a 64 letras, números, pontos, hífens ou sublinhados.',
+      deepLinkNameInvalid: 'Os nomes devem ter de 1 a 64 caracteres, formados por letras, números, pontos, hífens ou sublinhados.',
       deepLinkNameConflict: name => `Já existe um servidor chamado ${name} — escolha outro nome ou cancele.`,
       deepLinkErrorTitle: 'Link de instalação MCP rejeitado',
       deepLinkErrorName: 'O nome do servidor no link está ausente ou é inválido.',
