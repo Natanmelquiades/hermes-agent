@@ -1,10 +1,10 @@
 # Matriz de cobertura visual — Hermes Desktop pt-BR
 
-> **Story:** 1.7 — Cobertura visual e migração de strings de interface pt-BR  
-> **Branch:** `work/desktop-ptbr-visual-coverage`  
-> **Base:** `origin/main` em `c47f0b4590` + checkpoint `f71932021b`  
-> **Locale:** `pt-br` / **Português (Brasil)**  
-> **Plataforma prioritária:** Windows/Electron  
+> **Story:** 1.7 — Cobertura visual e migração de strings de interface pt-BR<br>
+> **Branch:** `work/desktop-ptbr-visual-coverage`<br>
+> **Base:** `origin/main` em `c47f0b4590` + checkpoint `f71932021b`<br>
+> **Locale:** `pt-br` / **Português (Brasil)**<br>
+> **Plataforma prioritária:** Windows/Electron<br>
 > **Estado:** inventário inicial; nenhuma superfície é considerada concluída sem evidência visual registrada.
 
 ## Critério de classificação
