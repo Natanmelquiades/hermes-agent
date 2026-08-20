@@ -455,7 +455,7 @@ function ToolEntry({ part }: ToolEntryProps) {
     (part.toolName === 'terminal' || part.toolName === 'execute_code' || part.toolName === 'read_file')
 
   const hasSearchHits = Boolean(view.searchHits?.length)
-  const searchResultsLabel = part.toolName === 'web_search' ? 'Search results' : view.detailLabel
+  const searchResultsLabel = part.toolName === 'web_search' ? copy.searchResultsLabel : view.detailLabel
 
   const hasExpandableContent = Boolean(
     view.imageUrl ||
@@ -620,7 +620,7 @@ function ToolEntry({ part }: ToolEntryProps) {
             <div className="max-w-full text-xs leading-relaxed text-(--ui-text-secondary)">
               {view.searchQuery && (
                 <p className="mb-1 flex min-w-0 gap-1.5 wrap-anywhere">
-                  <span className="shrink-0 font-medium text-(--ui-text-tertiary)">Search</span>
+                  <span className="shrink-0 font-medium text-(--ui-text-tertiary)">{copy.searchLabel}</span>
                   <span>{view.searchQuery}</span>
                 </p>
               )}
@@ -659,7 +659,7 @@ function ToolEntry({ part }: ToolEntryProps) {
                 {view.detailLabel && <p className={TOOL_SECTION_LABEL_CLASS}>{view.detailLabel}</p>}
                 {view.stdout && (
                   <div className="space-y-0.5">
-                    {view.stderr && <p className={TOOL_SECTION_LABEL_CLASS}>stdout</p>}
+                    {view.stderr && <p className={TOOL_SECTION_LABEL_CLASS}>{copy.stdoutLabel}</p>}
                     <pre className={cn(TOOL_SECTION_PRE_CLASS, 'whitespace-pre-wrap wrap-anywhere')}>
                       {view.rendersAnsi ? (
                         <AnsiText text={clampForDisplay(view.stdout)} />

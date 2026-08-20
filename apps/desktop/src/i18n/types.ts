@@ -2820,6 +2820,9 @@ export interface Translations {
       copyFile: string
       copyPath: string
       outputAlt: string
+      searchLabel: string
+      searchResultsLabel: string
+      stdoutLabel: string
       rawResponse: string
       copyActivity: string
       recoveredOne: string
