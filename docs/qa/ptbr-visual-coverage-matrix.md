@@ -25,7 +25,7 @@
 | Seletor de idioma e aparência | P0 | `src/components/language-switcher.tsx`, `src/app/settings/` | Fluxo pt-BR já validado parcialmente | Parcialmente validado | Troca, persistência, rollback, tema claro/escuro e escala |
 | Configurações gerais | P0 | `src/app/settings/` | Painel de memória e `custom-endpoints-settings.tsx` receberam superfícies tipadas; ainda há seções pendentes | Em implementação — validação visual pendente | Busca, seções, labels, tooltips, empty/error/loading states |
 | Modelos e providers | P0 | `src/app/settings/model-settings.tsx`, `src/components/onboarding/providers.tsx` | Mixture of Agents recebeu labels tipados; nomes de providers/modelos permanecem | Em implementação — validação visual pendente | Seleção, fallback, credenciais e mensagens de erro |
-| Ferramentas e skills | P1 | `src/app/skills/`, configurações de toolsets | Nomes técnicos e skills são dados; descrições e estados são interface | Pendente | Ativar/desativar, busca, ordenação, configuração e estados vazios |
+| Ferramentas e skills | P1 | `src/app/skills/`, configurações de toolsets | Badges de proveniência `learned`/`hub` agora usam `skills.provenance`; o restante da superfície ainda será auditado | Em implementação — validação visual pendente | Ativar/desativar, busca, ordenação, configuração e estados vazios |
 | MCP | P1 | superfícies MCP em `src/app/` e `src/components/` | Preservar URLs, comandos, IDs e nomes de servidores | Pendente | Adicionar, remover, conectar, falhar e deep link |
 | Gateway e webhooks | P1 | `src/app/settings/gateway-settings.tsx`, superfícies de webhooks | Catálogo pt-BR já contém mensagens; conferir telas hardcoded | Pendente | Conectar, desconectar, status, webhooks e erros |
 | Connections e perfis | P1 | `src/app/settings/connections-registry.tsx`, `src/app/profiles/` | Placeholders e hosts são dados; labels e descrições são traduzíveis | Pendente | Criar/editar/remover, remoto/local e validação |
@@ -78,7 +78,7 @@ Estes itens são sinais de investigação, não autorização automática para t
 ```text
 Superfícies inventariadas: 19
 Concluídas com evidência visual: 0
-Parcialmente implementadas: 8
+Parcialmente implementadas: 9
 Parcialmente validadas: 1 (idioma/aparência)
-Pendentes de auditoria visual: 10
+Pendentes de auditoria visual: 9
 ```
