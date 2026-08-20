@@ -59,3 +59,12 @@
 - O editor remoto foi aberto sem salvar: `Nome`, `URL do gateway`, autenticação, token da sessão, cabeçalhos extras e ações aparecem em pt-BR.
 - Placeholders, hosts, URLs, `OAuth`, `WebSocket`, `CF-Access-Client-Id` e demais identificadores técnicos foram preservados.
 - Evidências: `evidence/ptbr-gateway.png` e `evidence/ptbr-connection-editor.png`.
+
+## Skills e MCP
+
+- Tabs e controles do Desktop (`Habilidades`, `Ferramentas`, `MCP`, `Atualizar as instaladas`, `Novo servidor`, `Instalar`, `Salvar`) foram observados em pt-BR.
+- Badges de proveniência `learned`/`hub` e o toolset Computer Use aparecem localizados quando aplicável.
+- O iframe do Skills Hub mantém conteúdo e seletor de idioma próprios; não é alterado pelo locale do Desktop.
+- Descrições de catálogo MCP, nomes de servidores, transportes (`http`/`stdio`), auth (`OAuth`/`API key`) e JSON são metadados técnicos preservados.
+- Nenhum servidor foi instalado, importado ou salvo durante a validação.
+- Evidências: `evidence/ptbr-skills.png` e `evidence/ptbr-mcp.png`.

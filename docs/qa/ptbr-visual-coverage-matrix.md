@@ -25,8 +25,8 @@
 | Seletor de idioma e aparência | P0 | `src/components/language-switcher.tsx`, `src/app/settings/appearance-settings.tsx` | `lang="pt-br"`, seletor, placeholder da busca e descrições dos temas oficiais confirmados visualmente; persistência e demais controles ainda pendentes | Parcialmente validado | Troca, persistência, rollback, tema claro/escuro e escala |
 | Configurações gerais | P0 | `src/app/settings/` | Painel de memória e `custom-endpoints-settings.tsx` receberam superfícies tipadas; ainda há seções pendentes | Em implementação — validação visual pendente | Busca, seções, labels, tooltips, empty/error/loading states |
 | Modelos e providers | P0 | `src/app/settings/model-settings.tsx`, `src/components/onboarding/providers.tsx` | Mixture of Agents recebeu labels tipados; tela visualizada em pt-BR; nomes de providers/modelos permanecem | Parcialmente validado — fluxos com backend/credenciais ainda pendentes | Seleção, fallback, credenciais e mensagens de erro |
-| Ferramentas e skills | P1 | `src/app/skills/`, configurações de toolsets | Badges de proveniência `learned`/`hub` agora usam `skills.provenance`; o restante da superfície ainda será auditado | Em implementação — validação visual pendente | Ativar/desativar, busca, ordenação, configuração e estados vazios |
-| MCP | P1 | `src/app/skills/mcp-tab.tsx`, `src/components/assistant-ui/mcp-setup-tool.tsx` | Auditoria encontrou uso consistente de `t.settings.mcp`; `OAuth`, `API key`, transportes, JSON, env vars e nomes de servidores são técnicos | Auditada estruturalmente — validação visual pendente | Adicionar, remover, conectar, falhar e deep link |
+| Ferramentas e skills | P1 | `src/app/skills/`, configurações de toolsets | Tabs, busca, badges de proveniência e toolsets foram visualizados em pt-BR; iframe externo do Hub mantém locale próprio | Parcialmente validado | Ativar/desativar, busca, ordenação, configuração e estados vazios |
+| MCP | P1 | `src/app/skills/mcp-tab.tsx`, `src/components/assistant-ui/mcp-setup-tool.tsx` | Tabs, empty state, catálogo e ações foram visualizados em pt-BR; nomes, descrições, OAuth/API key, transportes e JSON permanecem técnicos | Parcialmente validado — instalação/conexão real ainda pendente | Adicionar, remover, conectar, falhar e deep link |
 | Gateway e webhooks | P1 | `src/app/settings/gateway-settings.tsx`, superfícies de webhooks | Modos, diagnóstico, reconexão e status visualizados em pt-BR; webhooks e fluxos autenticados ainda pendentes | Parcialmente validado | Conectar, desconectar, status, webhooks e erros |
 | Connections e perfis | P1 | `src/app/settings/connections-registry.tsx`, `src/app/profiles/` | Editor local/remoto visualizado em pt-BR; `This device` recebe label visual localizado; placeholders/hosts permanecem dados | Parcialmente validado | Criar/editar/remover, remoto/local e validação |
 | Memória | P1 | `src/app/settings/memory/` | `provider-config-panel.tsx` migrou loading, retry, configuração e status de campos para `t.ui` | Em implementação — validação visual pendente | Provider, dados, habilitar/desabilitar e erros |
@@ -79,6 +79,6 @@ Estes itens são sinais de investigação, não autorização automática para t
 Superfícies inventariadas: 19
 Concluídas com evidência visual: 0
 Parcialmente implementadas: 11
-Parcialmente validadas: 6 (idioma/aparência, modelos/providers, Computer Use, uninstall, Gateway, Connections)
-Pendentes de auditoria visual: 13
+Parcialmente validadas: 8 (idioma/aparência, modelos/providers, Computer Use, uninstall, Gateway, Connections, Skills, MCP)
+Pendentes de auditoria visual: 11
 ```
