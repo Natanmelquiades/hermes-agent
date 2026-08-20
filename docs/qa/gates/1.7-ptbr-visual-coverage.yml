@@ -30,8 +30,8 @@ checks:
     status: PENDING
     evidence: 'Aguardando execução por superfície'
   typecheck_lint_build:
-    status: PARTIAL
-    evidence: 'typecheck e lint passam; build ainda será executado após o lote'
+    status: PASS
+    evidence: 'npm run typecheck, npm run lint (0 erros; warnings preexistentes) e npm run build passam'
   upstream_pull_request:
     status: BLOCKED
     evidence: 'Nenhum PR ou merge no repositório oficial nesta etapa'
