@@ -3041,7 +3041,8 @@ export const ptBrOverrides: TranslationOverrides = {
     terminalNew: 'Novo terminal',
     terminalCloseOthers: 'Fechar os outros',
     terminalCloseAll: 'Fechar todos',
-    addToChat: 'Adicionar à conversa'
+    addToChat: 'Adicionar à conversa',
+    logsUnavailable: 'Logs indisponíveis'
   },
 
   preview: {

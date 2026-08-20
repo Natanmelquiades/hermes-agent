@@ -2548,6 +2548,7 @@ export interface Translations {
     terminalCloseOthers: string
     terminalCloseAll: string
     addToChat: string
+    logsUnavailable: string
   }
 
   preview: {
