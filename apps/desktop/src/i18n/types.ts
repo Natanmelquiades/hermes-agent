@@ -1003,6 +1003,19 @@ export interface Translations {
       waitingForApproval: string
       grantPermissions: string
     }
+    uninstall: {
+      guiTitle: string
+      guiDescription: string
+      guiConsequence: string
+      liteTitle: string
+      liteDescription: string
+      liteConsequence: string
+      fullTitle: string
+      fullDescription: string
+      fullConsequence: string
+      appPath: (path: string) => string
+      couldNotStart: string
+    }
     sessions: {
       loading: string
       archivedTitle: string

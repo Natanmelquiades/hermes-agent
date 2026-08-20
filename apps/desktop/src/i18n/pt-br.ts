@@ -1238,6 +1238,22 @@ export const ptBrOverrides: TranslationOverrides = {
       waitingForApproval: 'Aguardando aprovação…',
       grantPermissions: 'Conceder permissões'
     },
+    uninstall: {
+      guiTitle: 'Desinstalar somente a interface de chat',
+      guiDescription: 'Remove este app de desktop. O agente Hermes, suas configurações e conversas permanecem.',
+      guiConsequence: 'a interface de chat do Desktop (este app e seus dados)',
+      liteTitle: 'Desinstalar interface + agente e manter meus dados',
+      liteDescription:
+        'Remove o app e o agente Hermes, mas mantém configurações, conversas e segredos para uma futura reinstalação.',
+      liteConsequence: 'a interface de chat e o agente Hermes (configurações, conversas e segredos são mantidos)',
+      fullTitle: 'Desinstalar tudo',
+      fullDescription:
+        'Remove o app, o agente e todos os dados do usuário — configurações, conversas, tarefas agendadas, segredos e logs.',
+      fullConsequence:
+        'TUDO — a interface de chat, o agente Hermes e todas as suas configurações, conversas, segredos e logs',
+      appPath: path => `App: ${path}`,
+      couldNotStart: 'Não foi possível iniciar a desinstalação.'
+    },
     sessions: {
       loading: 'Carregando sessões arquivadas…',
       archivedTitle: 'Sessões arquivadas',

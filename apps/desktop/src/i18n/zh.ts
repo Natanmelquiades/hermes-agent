@@ -1343,6 +1343,19 @@ export const zh: Translations = {
       waitingForApproval: '等待批准…',
       grantPermissions: '授予权限'
     },
+    uninstall: {
+      guiTitle: '仅卸载聊天界面',
+      guiDescription: '移除此桌面应用。Hermes 代理、配置和对话都会保留。',
+      guiConsequence: '桌面聊天界面（此应用及其数据）',
+      liteTitle: '卸载界面和代理，但保留我的数据',
+      liteDescription: '移除应用和 Hermes 代理，但保留配置、对话和密钥以便将来重新安装。',
+      liteConsequence: '聊天界面和 Hermes 代理（配置、对话和密钥会保留）',
+      fullTitle: '卸载全部内容',
+      fullDescription: '移除应用、代理和所有用户数据 — 配置、对话、计划任务、密钥和日志。',
+      fullConsequence: '全部内容 — 聊天界面、Hermes 代理以及所有配置、对话、密钥和日志',
+      appPath: path => `应用：${path}`,
+      couldNotStart: '无法开始卸载。'
+    },
     sessions: {
       loading: '正在加载已归档会话…',
       archivedTitle: '已归档会话',

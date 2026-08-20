@@ -1150,6 +1150,20 @@ export const en: Translations = {
       waitingForApproval: 'Waiting for approval…',
       grantPermissions: 'Grant permissions'
     },
+    uninstall: {
+      guiTitle: 'Uninstall Chat GUI only',
+      guiDescription: 'Remove this desktop app. The Hermes agent, your config, and chats all stay.',
+      guiConsequence: 'the desktop Chat GUI (this app and its data)',
+      liteTitle: 'Uninstall GUI + agent, keep my data',
+      liteDescription:
+        'Remove the app and the Hermes agent, but keep config, chats, and secrets for a future reinstall.',
+      liteConsequence: 'the Chat GUI and the Hermes agent (config, chats, and secrets are kept)',
+      fullTitle: 'Uninstall everything',
+      fullDescription: 'Remove the app, the agent, and all user data — config, chats, scheduled jobs, secrets, logs.',
+      fullConsequence: 'EVERYTHING — the Chat GUI, the Hermes agent, and all of your config, chats, secrets, and logs',
+      appPath: path => `App: ${path}`,
+      couldNotStart: 'Uninstall could not start.'
+    },
     sessions: {
       loading: 'Loading archived sessions…',
       archivedTitle: 'Archived sessions',

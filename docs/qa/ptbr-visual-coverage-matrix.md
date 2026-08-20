@@ -31,6 +31,7 @@
 | Connections e perfis | P1 | `src/app/settings/connections-registry.tsx`, `src/app/profiles/` | Placeholders e hosts são dados; labels e descrições são traduzíveis | Pendente | Criar/editar/remover, remoto/local e validação |
 | Memória | P1 | `src/app/settings/memory/` | `provider-config-panel.tsx` migrou loading, retry, configuração e status de campos para `t.ui` | Em implementação — validação visual pendente | Provider, dados, habilitar/desabilitar e erros |
 | Computer Use | P1 | `src/app/settings/computer-use-panel.tsx` | Status, permissões e estados do `cua-driver` receberam superfície tipada | Em implementação — validação visual pendente | Windows/Linux/macOS, permissões, driver health e erros |
+| Uninstall / Danger zone | P1 | `src/app/settings/uninstall-section.tsx` | Modalidades gui/lite/full e confirmação usam cópia tipada; dados do caminho permanecem dinâmicos | Em implementação — validação visual pendente | Opções, confirmação destrutiva, erro e encerramento do app |
 | Files, Terminal, Preview e Review | P1 | `src/app/right-sidebar/`, `src/components/pane-shell/` | Superfícies técnicas misturam UI com comandos/caminhos | Pendente | Abrir painéis, empty/error states, menus e acessibilidade |
 | Status stack e tarefas | P1 | `src/app/chat/composer/status-stack/`, `src/components/chat/` | Catálogo possui estados; conferir componentes fora do provider | Pendente | Agentes, subagentes, objetivos, tarefas e worktree |
 | Atualização e instalação | P1 | `src/app/updates/`, `src/components/desktop-install-overlay.tsx` | Mensagens de atualização precisam de revisão visual e pluralização | Pendente | Baixar, aplicar, reiniciar, erro e backend remoto |
@@ -75,9 +76,9 @@ Estes itens são sinais de investigação, não autorização automática para t
 ## Estado da matriz
 
 ```text
-Superfícies inventariadas: 18
+Superfícies inventariadas: 19
 Concluídas com evidência visual: 0
-Parcialmente implementadas: 7
+Parcialmente implementadas: 8
 Parcialmente validadas: 1 (idioma/aparência)
 Pendentes de auditoria visual: 10
 ```
