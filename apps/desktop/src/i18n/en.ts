@@ -563,6 +563,20 @@ export const en: Translations = {
       technicalDesc: 'Include raw tool args/results and low-level details.',
       themeTitle: 'Theme',
       themeDesc: 'Desktop palettes only. The selected mode is applied on top.',
+      themeSearchPlaceholder: 'Search your themes or the VS Code Marketplace…',
+      noThemesMatch: query => `No installed themes match "${query.trim()}".`,
+      themeDescriptions: {
+        github: 'GitHub Light Default and Dark Default',
+        nous: 'GitHub chrome, Nous blue accent',
+        catppuccin: 'Soothing pastels — Latte and Mocha',
+        everforest: 'Warm, low-contrast forest greens',
+        solarized: 'Fixed-contrast light and dark',
+        midnight: 'Deep blue-violet with cool accents',
+        ember: 'Warm crimson and bronze — forge vibes',
+        mono: 'Clean grayscale — minimal and focused',
+        cyberpunk: 'Neon green on black — matrix terminal',
+        slate: 'Cool slate blue — focused developer theme'
+      },
       themeProfileNote: profile => `Saved for the ${profile} profile — each profile keeps its own theme.`,
       installTitle: 'Install from VS Code',
       installDesc:

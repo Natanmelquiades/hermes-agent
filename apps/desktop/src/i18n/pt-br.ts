@@ -490,6 +490,20 @@ export const ptBrOverrides: TranslationOverrides = {
       technicalDesc: 'Inclui argumentos e resultados brutos das ferramentas e detalhes de baixo nível.',
       themeTitle: 'Tema',
       themeDesc: 'Apenas paletas do Desktop. O modo selecionado é aplicado por cima.',
+      themeSearchPlaceholder: 'Pesquisar seus temas ou o Marketplace do VS Code…',
+      noThemesMatch: query => `Nenhum tema instalado corresponde a “${query.trim()}”.`,
+      themeDescriptions: {
+        github: 'Padrão claro e escuro do GitHub',
+        nous: 'Interface do GitHub com destaque azul da Nous',
+        catppuccin: 'Tons pastel suaves — Latte e Mocha',
+        everforest: 'Verdes florestais quentes e de baixo contraste',
+        solarized: 'Claro e escuro com contraste fixo',
+        midnight: 'Azul-violeta profundo com acentos frios',
+        ember: 'Carmesim e bronze quentes — clima de forja',
+        mono: 'Escala de cinza limpa — minimalista e focado',
+        cyberpunk: 'Verde neon sobre preto — terminal de matriz',
+        slate: 'Azul ardósia frio — tema focado para desenvolvedores'
+      },
       themeProfileNote: profile => `Salvo para o perfil ${profile} — cada perfil mantém o próprio tema.`,
       installTitle: 'Instalar tema do VS Code',
       installDesc:

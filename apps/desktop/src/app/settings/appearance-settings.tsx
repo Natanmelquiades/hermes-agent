@@ -359,6 +359,9 @@ export function AppearanceSettings() {
   const activeProfileKey = normalizeProfileKey(useStore($activeGatewayProfile))
   const a = t.settings.appearance
 
+  const themeDescription = (theme: (typeof availableThemes)[number]) =>
+    a.themeDescriptions[theme.name] ?? theme.description
+
   // A pointer held on the intensity slider when this overlay closes (Escape
   // mid-drag) never delivers its pointerup here, which would strand the peek
   // counter above zero and ghost the NEXT settings overlay. Unmount drops
@@ -398,7 +401,7 @@ export function AppearanceSettings() {
         !needle ||
         theme.label.toLowerCase().includes(needle) ||
         theme.name.toLowerCase().includes(needle) ||
-        theme.description.toLowerCase().includes(needle)
+        themeDescription(theme).toLowerCase().includes(needle)
     )
     // Active theme first; stable sort keeps the rest in their original order.
     .sort((a, b) => Number(b.name === themeName) - Number(a.name === themeName))
@@ -458,7 +461,7 @@ export function AppearanceSettings() {
                   <input
                     className="w-full rounded-lg border border-(--ui-stroke-tertiary) bg-(--ui-bg-quinary) px-3 py-1.5 text-[length:var(--conversation-caption-font-size)] outline-none placeholder:text-(--ui-text-tertiary) focus:border-(--ui-stroke-secondary)"
                     onChange={event => setQuery(event.target.value)}
-                    placeholder="Search your themes or the VS Code Marketplace…"
+                    placeholder={a.themeSearchPlaceholder}
                     spellCheck={false}
                     value={query}
                   />
@@ -470,7 +473,7 @@ export function AppearanceSettings() {
                   {filteredThemes.length === 0 ? (
                     needle ? (
                       <p className="text-[length:var(--conversation-caption-font-size)] text-(--ui-text-tertiary)">
-                        No installed themes match "{query.trim()}".
+                        {a.noThemesMatch(query)}
                       </p>
                     ) : null
                   ) : (
@@ -495,7 +498,7 @@ export function AppearanceSettings() {
                                   {theme.label}
                                 </div>
                                 <div className="mt-0.5 line-clamp-2 text-[length:var(--conversation-caption-font-size)] leading-(--conversation-caption-line-height) text-(--ui-text-tertiary)">
-                                  {theme.description}
+                                  {themeDescription(theme)}
                                 </div>
                               </div>
                             </button>
