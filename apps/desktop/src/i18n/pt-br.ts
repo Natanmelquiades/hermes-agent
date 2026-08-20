@@ -1209,6 +1209,35 @@ export const ptBrOverrides: TranslationOverrides = {
       activationFailed: 'Falha ao ativar',
       deleteFailed: 'Falha ao excluir'
     },
+    computerUse: {
+      loading: 'Verificando o status do Computer Use…',
+      unsupported: platform => `O Computer Use não é compatível com esta plataforma (${platform}).`,
+      installBackend: 'Instale abaixo o backend cua-driver para controlar este computador.',
+      grantHere: ' Depois, conceda aqui as permissões de Acessibilidade e Gravação de tela.',
+      linuxNote: 'Controla o Desktop pela camada de acessibilidade X11/XWayland — nenhuma solicitação de permissão.',
+      windowsNote:
+        'Na primeira execução, o Windows pode exibir um aviso do SmartScreen para o worker UIAccess do cua-driver — permita-o.',
+      driverIdentity:
+        'As permissões pertencem à identidade do CuaDriver (com.trycua.driver), não ao Hermes — por isso a janela é atribuída ao processo que controla o Mac.',
+      recheck: 'Verificar novamente',
+      accessibility: 'Acessibilidade',
+      accessibilityHint: 'Permite que o cua-driver clique, envie teclas e leia a árvore de acessibilidade.',
+      screenRecording: 'Gravação de tela',
+      screenRecordingHint: 'Permite que o cua-driver capture screenshots das janelas dos aplicativos.',
+      granted: 'Concedida',
+      notGranted: 'Não concedida',
+      unknown: 'Desconhecida',
+      driverHealth: 'Saúde do driver',
+      ready: 'Pronto',
+      notReady: 'Não está pronto',
+      computerUseReady: 'O Computer Use está pronto. Peça ao agente para capturar um app e clicar nele.',
+      approveInSystemSettings: 'Aprovar nos Ajustes do sistema',
+      permissionDialogMessage:
+        'O macOS exibirá uma janela de permissão atribuída ao CuaDriver. Aprove-a e depois volte para cá.',
+      requestPermissionsFailed: 'Não foi possível solicitar as permissões',
+      waitingForApproval: 'Aguardando aprovação…',
+      grantPermissions: 'Conceder permissões'
+    },
     sessions: {
       loading: 'Carregando sessões arquivadas…',
       archivedTitle: 'Sessões arquivadas',

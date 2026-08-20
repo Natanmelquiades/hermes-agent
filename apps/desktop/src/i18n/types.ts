@@ -977,6 +977,32 @@ export interface Translations {
       activationFailed: string
       deleteFailed: string
     }
+    computerUse: {
+      loading: string
+      unsupported: (platform: string) => string
+      installBackend: string
+      grantHere: string
+      linuxNote: string
+      windowsNote: string
+      driverIdentity: string
+      recheck: string
+      accessibility: string
+      accessibilityHint: string
+      screenRecording: string
+      screenRecordingHint: string
+      granted: string
+      notGranted: string
+      unknown: string
+      driverHealth: string
+      ready: string
+      notReady: string
+      computerUseReady: string
+      approveInSystemSettings: string
+      permissionDialogMessage: string
+      requestPermissionsFailed: string
+      waitingForApproval: string
+      grantPermissions: string
+    }
     sessions: {
       loading: string
       archivedTitle: string

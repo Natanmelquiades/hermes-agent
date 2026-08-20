@@ -1122,6 +1122,34 @@ export const en: Translations = {
       activationFailed: 'Activation failed',
       deleteFailed: 'Delete failed'
     },
+    computerUse: {
+      loading: 'Checking Computer Use status…',
+      unsupported: platform => `Computer Use isn’t supported on this platform (${platform}).`,
+      installBackend: 'Install the cua-driver backend below to drive this machine.',
+      grantHere: ' Then grant Accessibility and Screen Recording here.',
+      linuxNote: 'Drives your desktop via the X11/XWayland accessibility stack — no permission prompt.',
+      windowsNote: 'First run may trigger a Windows SmartScreen prompt for the cua-driver UIAccess worker — allow it.',
+      driverIdentity:
+        "Grants attach to CuaDriver's own identity (com.trycua.driver), not Hermes — so the dialog is attributed to the process that drives your Mac.",
+      recheck: 'Recheck',
+      accessibility: 'Accessibility',
+      accessibilityHint: 'Lets cua-driver post clicks, keystrokes, and read the accessibility tree.',
+      screenRecording: 'Screen Recording',
+      screenRecordingHint: 'Lets cua-driver capture screenshots of app windows.',
+      granted: 'Granted',
+      notGranted: 'Not granted',
+      unknown: 'Unknown',
+      driverHealth: 'Driver health',
+      ready: 'Ready',
+      notReady: 'Not ready',
+      computerUseReady: 'Computer Use is ready. Ask the agent to capture an app and click around.',
+      approveInSystemSettings: 'Approve in System Settings',
+      permissionDialogMessage:
+        'macOS will show a permission dialog attributed to CuaDriver. Approve it, then return here.',
+      requestPermissionsFailed: 'Could not request permissions',
+      waitingForApproval: 'Waiting for approval…',
+      grantPermissions: 'Grant permissions'
+    },
     sessions: {
       loading: 'Loading archived sessions…',
       archivedTitle: 'Archived sessions',
