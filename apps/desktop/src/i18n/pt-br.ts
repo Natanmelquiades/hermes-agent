@@ -1124,6 +1124,24 @@ export const ptBrOverrides: TranslationOverrides = {
         mcp: { label: 'MCP', hint: 'Roteamento de ferramentas MCP' },
         title_generation: { label: 'Geração de título', hint: 'Títulos das sessões' },
         curator: { label: 'Curador', hint: 'Revisão do uso de habilidades' }
+      },
+      moa: {
+        title: 'Mixture of Agents',
+        description:
+          'Configure predefinições nomeadas que aparecem como modelos no provedor Mixture of Agents. O agregador é o modelo em uso.',
+        preset: 'Predefinição',
+        enabled: 'Ativado',
+        setDefault: 'Definir como padrão',
+        delete: 'Excluir',
+        newPresetPlaceholder: 'nova predefinição',
+        addPreset: 'Adicionar predefinição',
+        defaultLabel: 'Padrão',
+        disableReference: index => `Desativar referência ${index}`,
+        enableReference: index => `Ativar referência ${index}`,
+        remove: 'Remover',
+        reference: index => `Referência ${index}`,
+        addReference: 'Adicionar modelo de referência',
+        aggregator: 'Agregador'
       }
     },
     providers: {

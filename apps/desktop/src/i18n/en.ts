@@ -1038,6 +1038,24 @@ export const en: Translations = {
         mcp: { label: 'MCP', hint: 'MCP tool routing' },
         title_generation: { label: 'Title gen', hint: 'Session titles' },
         curator: { label: 'Curator', hint: 'Skill-usage review' }
+      },
+      moa: {
+        title: 'Mixture of Agents',
+        description:
+          'Configure named presets that appear as models under the Mixture of Agents provider. The aggregator is the acting model.',
+        preset: 'Preset',
+        enabled: 'Enabled',
+        setDefault: 'Set default',
+        delete: 'Delete',
+        newPresetPlaceholder: 'new preset',
+        addPreset: 'Add preset',
+        defaultLabel: 'Default',
+        disableReference: index => `Disable reference ${index}`,
+        enableReference: index => `Enable reference ${index}`,
+        remove: 'Remove',
+        reference: index => `Reference ${index}`,
+        addReference: 'Add reference model',
+        aggregator: 'Aggregator'
       }
     },
     providers: {

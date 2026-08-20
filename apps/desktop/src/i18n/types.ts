@@ -897,6 +897,23 @@ export interface Translations {
       fallbackEmpty: string
       notInCatalog: string
       tasks: Record<string, AuxTaskCopy>
+      moa: {
+        title: string
+        description: string
+        preset: string
+        enabled: string
+        setDefault: string
+        delete: string
+        newPresetPlaceholder: string
+        addPreset: string
+        defaultLabel: string
+        disableReference: (index: number) => string
+        enableReference: (index: number) => string
+        remove: string
+        reference: (index: number) => string
+        addReference: string
+        aggregator: string
+      }
     }
     providers: {
       connectAccount: string

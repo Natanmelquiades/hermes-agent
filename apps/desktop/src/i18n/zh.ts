@@ -1236,6 +1236,23 @@ export const zh: Translations = {
         mcp: { label: 'MCP', hint: 'MCP 工具路由' },
         title_generation: { label: '标题生成', hint: '会话标题' },
         curator: { label: '维护器', hint: '技能使用审查' }
+      },
+      moa: {
+        title: 'Mixture of Agents',
+        description: '配置显示为 Mixture of Agents 提供方模型的命名预设。聚合器是实际运行的模型。',
+        preset: '预设',
+        enabled: '已启用',
+        setDefault: '设为默认',
+        delete: '删除',
+        newPresetPlaceholder: '新预设',
+        addPreset: '添加预设',
+        defaultLabel: '默认',
+        disableReference: index => `禁用参考模型 ${index}`,
+        enableReference: index => `启用参考模型 ${index}`,
+        remove: '移除',
+        reference: index => `参考模型 ${index}`,
+        addReference: '添加参考模型',
+        aggregator: '聚合器'
       }
     },
     providers: {

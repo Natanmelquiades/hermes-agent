@@ -24,7 +24,7 @@
 | Compositor e comandos | P0 | `src/app/chat/composer/` | `/help`, comandos e referências inline são operacionais; labels auxiliares são traduzíveis | Pendente | Compositor, anexos, snippets, quick actions e autocomplete |
 | Seletor de idioma e aparência | P0 | `src/components/language-switcher.tsx`, `src/app/settings/` | Fluxo pt-BR já validado parcialmente | Parcialmente validado | Troca, persistência, rollback, tema claro/escuro e escala |
 | Configurações gerais | P0 | `src/app/settings/` | Painel de memória e `custom-endpoints-settings.tsx` receberam superfícies tipadas; ainda há seções pendentes | Em implementação — validação visual pendente | Busca, seções, labels, tooltips, empty/error/loading states |
-| Modelos e providers | P0 | `src/app/settings/model-settings.tsx`, `src/components/onboarding/providers.tsx` | Nomes de providers/modelos devem permanecer; UI ao redor deve traduzir | Pendente | Seleção, fallback, credenciais e mensagens de erro |
+| Modelos e providers | P0 | `src/app/settings/model-settings.tsx`, `src/components/onboarding/providers.tsx` | Mixture of Agents recebeu labels tipados; nomes de providers/modelos permanecem | Em implementação — validação visual pendente | Seleção, fallback, credenciais e mensagens de erro |
 | Ferramentas e skills | P1 | `src/app/skills/`, configurações de toolsets | Nomes técnicos e skills são dados; descrições e estados são interface | Pendente | Ativar/desativar, busca, ordenação, configuração e estados vazios |
 | MCP | P1 | superfícies MCP em `src/app/` e `src/components/` | Preservar URLs, comandos, IDs e nomes de servidores | Pendente | Adicionar, remover, conectar, falhar e deep link |
 | Gateway e webhooks | P1 | `src/app/settings/gateway-settings.tsx`, superfícies de webhooks | Catálogo pt-BR já contém mensagens; conferir telas hardcoded | Pendente | Conectar, desconectar, status, webhooks e erros |
@@ -76,7 +76,7 @@ Estes itens são sinais de investigação, não autorização automática para t
 ```text
 Superfícies inventariadas: 17
 Concluídas com evidência visual: 0
-Parcialmente implementadas: 5
+Parcialmente implementadas: 6
 Parcialmente validadas: 1 (idioma/aparência)
-Pendentes de auditoria visual: 11
+Pendentes de auditoria visual: 10
 ```
