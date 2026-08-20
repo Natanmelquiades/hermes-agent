@@ -1081,6 +1081,7 @@ export interface Translations {
       nousAuthDoneMessage: string
       nousAuthFailed: string
       noApiKeyRequired: string
+      computerUseProviderDescription: string
       postSetupHint: (step: string) => string
       postSetupInstalledHint: string
       postSetupRun: string
@@ -1143,6 +1144,7 @@ export interface Translations {
     noToolsetsTitle: string
     noToolsetsDesc: string
     noDescription: string
+    computerUseDescription: string
     configured: string
     needsKeys: string
     visionModelHint: string

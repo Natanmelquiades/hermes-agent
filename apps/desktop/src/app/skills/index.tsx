@@ -882,6 +882,9 @@ export function SkillsView({
                     const label = toolsetDisplayLabel(toolset)
                     const calls = toolCalls ? toolsetCalls(toolset, toolCalls) : null
 
+                    const description =
+                      toolset.name === 'computer_use' ? t.skills.computerUseDescription : asText(toolset.description)
+
                     return (
                       <CapRow
                         active={activeToolset?.name === toolset.name}
@@ -899,7 +902,7 @@ export function SkillsView({
                         }
                         onSelect={() => setSelectedToolset(toolset.name)}
                         onToggle={checked => void handleToggleToolset(toolset, checked)}
-                        subtitle={asText(toolset.description)}
+                        subtitle={description}
                         title={label}
                         toggleLabel={t.skills.toggleToolset(label, !toolset.enabled)}
                       />
@@ -1129,7 +1132,11 @@ function ToolsetDetail({
     <>
       {/* "Configured" as a resting state is noise — only the warn state earns a pill. */}
       <DetailHeader
-        description={asText(toolset.description) || t.skills.noDescription}
+        description={
+          toolset.name === 'computer_use'
+            ? t.skills.computerUseDescription
+            : asText(toolset.description) || t.skills.noDescription
+        }
         pills={!toolset.configured && <PanelPill tone="warn">{t.skills.needsKeys}</PanelPill>}
         title={label}
       />

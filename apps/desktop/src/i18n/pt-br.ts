@@ -1336,6 +1336,8 @@ export const ptBrOverrides: TranslationOverrides = {
       nousAuthDoneMessage: 'Os backends da sua assinatura estão ativos agora.',
       nousAuthFailed: 'O login no Nous Portal não foi concluído',
       noApiKeyRequired: 'Nenhuma chave de API necessária.',
+      computerUseProviderDescription:
+        'Uso do computador em segundo plano via cua-driver — não captura seu cursor nem o foco. Funciona com qualquer modelo.',
       postSetupHint: step =>
         `Este backend precisa de uma instalação única (${step}). É executado nesta máquina — pode levar alguns minutos.`,
       postSetupInstalledHint: 'Instalado. Refaça a configuração apenas se algo estiver quebrado.',
@@ -1400,6 +1402,8 @@ export const ptBrOverrides: TranslationOverrides = {
     noToolsetsTitle: 'Nenhum conjunto de ferramentas encontrado',
     noToolsetsDesc: 'Tente uma busca mais ampla.',
     noDescription: 'Sem descrição.',
+    computerUseDescription:
+      'Uso do computador em segundo plano via cua-driver — não captura seu cursor nem o foco. Funciona com qualquer modelo.',
     configured: 'Configurado',
     needsKeys: 'Precisa de chaves',
     visionModelHint:

@@ -771,6 +771,11 @@ export function ToolsetConfigPanel({ toolset, onConfiguredChange, profile }: Too
         const isSearchBackend = Boolean(provider.web_backend && cfg.active_search_backend === provider.web_backend)
         const isExtractBackend = Boolean(provider.web_backend && cfg.active_extract_backend === provider.web_backend)
 
+        const providerTag =
+          toolset === 'computer_use' && provider.name === 'cua-driver'
+            ? copy.computerUseProviderDescription
+            : provider.tag
+
         return (
           <div className="overflow-hidden rounded-xl bg-background/60" key={provider.name}>
             <button
@@ -813,7 +818,7 @@ export function ToolsetConfigPanel({ toolset, onConfiguredChange, profile }: Too
 
             {isExpanded && (
               <div className="grid gap-2 bg-muted/20 p-3">
-                {provider.tag && <p className="text-[0.72rem] text-muted-foreground">{provider.tag}</p>}
+                {providerTag && <p className="text-[0.72rem] text-muted-foreground">{providerTag}</p>}
                 {(toolset !== 'web' || webCaps.length === 0) && (
                   // Explicit activation — the old row-click-selects UX gave no
                   // signal about which backend was actually in use and made

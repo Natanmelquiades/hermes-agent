@@ -24,14 +24,14 @@
 | Compositor e comandos | P0 | `src/app/chat/composer/` | `/help`, comandos e referências inline são operacionais; labels auxiliares são traduzíveis | Pendente | Compositor, anexos, snippets, quick actions e autocomplete |
 | Seletor de idioma e aparência | P0 | `src/components/language-switcher.tsx`, `src/app/settings/appearance-settings.tsx` | `lang="pt-br"`, seletor, placeholder da busca e descrições dos temas oficiais confirmados visualmente; persistência e demais controles ainda pendentes | Parcialmente validado | Troca, persistência, rollback, tema claro/escuro e escala |
 | Configurações gerais | P0 | `src/app/settings/` | Painel de memória e `custom-endpoints-settings.tsx` receberam superfícies tipadas; ainda há seções pendentes | Em implementação — validação visual pendente | Busca, seções, labels, tooltips, empty/error/loading states |
-| Modelos e providers | P0 | `src/app/settings/model-settings.tsx`, `src/components/onboarding/providers.tsx` | Mixture of Agents recebeu labels tipados; nomes de providers/modelos permanecem | Em implementação — validação visual pendente | Seleção, fallback, credenciais e mensagens de erro |
+| Modelos e providers | P0 | `src/app/settings/model-settings.tsx`, `src/components/onboarding/providers.tsx` | Mixture of Agents recebeu labels tipados; tela visualizada em pt-BR; nomes de providers/modelos permanecem | Parcialmente validado — fluxos com backend/credenciais ainda pendentes | Seleção, fallback, credenciais e mensagens de erro |
 | Ferramentas e skills | P1 | `src/app/skills/`, configurações de toolsets | Badges de proveniência `learned`/`hub` agora usam `skills.provenance`; o restante da superfície ainda será auditado | Em implementação — validação visual pendente | Ativar/desativar, busca, ordenação, configuração e estados vazios |
 | MCP | P1 | `src/app/skills/mcp-tab.tsx`, `src/components/assistant-ui/mcp-setup-tool.tsx` | Auditoria encontrou uso consistente de `t.settings.mcp`; `OAuth`, `API key`, transportes, JSON, env vars e nomes de servidores são técnicos | Auditada estruturalmente — validação visual pendente | Adicionar, remover, conectar, falhar e deep link |
 | Gateway e webhooks | P1 | `src/app/settings/gateway-settings.tsx`, superfícies de webhooks | Catálogo pt-BR já contém mensagens; conferir telas hardcoded | Pendente | Conectar, desconectar, status, webhooks e erros |
 | Connections e perfis | P1 | `src/app/settings/connections-registry.tsx`, `src/app/profiles/` | Placeholders e hosts são dados; labels e descrições são traduzíveis | Pendente | Criar/editar/remover, remoto/local e validação |
 | Memória | P1 | `src/app/settings/memory/` | `provider-config-panel.tsx` migrou loading, retry, configuração e status de campos para `t.ui` | Em implementação — validação visual pendente | Provider, dados, habilitar/desabilitar e erros |
-| Computer Use | P1 | `src/app/settings/computer-use-panel.tsx` | Status, permissões e estados do `cua-driver` receberam superfície tipada | Em implementação — validação visual pendente | Windows/Linux/macOS, permissões, driver health e erros |
-| Uninstall / Danger zone | P1 | `src/app/settings/uninstall-section.tsx` | Modalidades gui/lite/full e confirmação usam cópia tipada; dados do caminho permanecem dinâmicos | Em implementação — validação visual pendente | Opções, confirmação destrutiva, erro e encerramento do app |
+| Computer Use | P1 | `src/app/settings/computer-use-panel.tsx` | Status, permissões, provider e estados do `cua-driver` receberam superfície tipada e foram visualizados em pt-BR | Parcialmente validado — plataformas/permissões alternativas ainda pendentes | Windows/Linux/macOS, permissões, driver health e erros |
+| Uninstall / Danger zone | P1 | `src/app/settings/uninstall-section.tsx` | Modalidades gui/lite/full e confirmação usam cópia tipada; zona de perigo visualizada em pt-BR; dados do caminho permanecem dinâmicos | Parcialmente validado — confirmação destrutiva não executada | Opções, confirmação destrutiva, erro e encerramento do app |
 | Files, Terminal, Preview e Review | P1 | `src/app/right-sidebar/`, `src/components/pane-shell/`, `src/app/contrib/panes.tsx` | Files/Review/Terminal usam catálogo; erro da pane auxiliar de logs agora usa `rightSidebar.logsUnavailable`; caminhos e conteúdo permanecem técnicos | Em implementação — validação visual pendente | Abrir painéis, empty/error states, menus e acessibilidade |
 | Status stack e tarefas | P1 | `src/app/chat/composer/status-stack/`, `src/components/chat/` | Catálogo possui estados; conferir componentes fora do provider | Pendente | Agentes, subagentes, objetivos, tarefas e worktree |
 | Atualização e instalação | P1 | `src/app/updates/`, `src/components/desktop-install-overlay.tsx` | Mensagens de atualização precisam de revisão visual e pluralização | Pendente | Baixar, aplicar, reiniciar, erro e backend remoto |
@@ -79,6 +79,6 @@ Estes itens são sinais de investigação, não autorização automática para t
 Superfícies inventariadas: 19
 Concluídas com evidência visual: 0
 Parcialmente implementadas: 11
-Parcialmente validadas: 1 (idioma/aparência)
-Pendentes de auditoria visual: 7
+Parcialmente validadas: 4 (idioma/aparência, modelos/providers, Computer Use, uninstall)
+Pendentes de auditoria visual: 4
 ```

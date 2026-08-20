@@ -1243,6 +1243,8 @@ export const en: Translations = {
       nousAuthDoneMessage: 'Your subscription backends are now active.',
       nousAuthFailed: 'Nous Portal sign-in did not complete',
       noApiKeyRequired: 'No API key required.',
+      computerUseProviderDescription:
+        'Background computer-use via cua-driver — does NOT steal your cursor or focus. Works with any model.',
       postSetupHint: step =>
         `This backend needs a one-time install (${step}). Runs on this machine — may take a few minutes.`,
       postSetupInstalledHint: 'Installed. Re-run setup only if something is broken.',
@@ -1306,6 +1308,8 @@ export const en: Translations = {
     noToolsetsTitle: 'No toolsets found',
     noToolsetsDesc: 'Try a broader search query.',
     noDescription: 'No description.',
+    computerUseDescription:
+      'Background computer-use via cua-driver — does NOT steal your cursor or focus. Works with any model.',
     configured: 'Configured',
     needsKeys: 'Needs keys',
     visionModelHint:
