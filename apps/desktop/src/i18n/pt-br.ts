@@ -2781,6 +2781,7 @@ export const ptBrOverrides: TranslationOverrides = {
     featuredPitch: 'Uma assinatura, mais de 300 modelos de ponta — a forma recomendada de rodar o Hermes',
     fireworksPitch: 'API direta de modelos — modelos avançados hospedados pela Fireworks',
     openRouterPitch: 'Uma chave, centenas de modelos — uma ótima opção padrão',
+    directApiAccess: provider => `Acesso direto à API de ${provider}.`,
     apiKeyOptions: {
       fireworks: {
         short: 'API direta de modelos',

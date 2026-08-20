@@ -19,7 +19,7 @@
 
 | Superfície | Prioridade | Componentes/áreas de origem | Sinais iniciais | Estado | Evidência exigida |
 |---|---:|---|---|---|---|
-| Boot e onboarding | P0 | `src/components/desktop-install-overlay.tsx`, `src/components/first-run-remote-form.tsx`, `src/components/onboarding/` | Catálogo possui chaves de boot/install; revisar labels literais e estados | Pendente | Screenshot/registro de English → pt-BR e retorno para English |
+| Boot e onboarding | P0 | `src/components/desktop-install-overlay.tsx`, `src/components/first-run-remote-form.tsx`, `src/components/onboarding/` | Fluxos usam catálogo; descrições genéricas de providers de chave agora usam `onboarding.directApiAccess`; nomes e env vars permanecem | Em implementação — validação visual pendente | Screenshot/registro de English → pt-BR e retorno para English |
 | Chat principal | P0 | `src/app/chat/`, `src/components/assistant-ui/` | Timeline, reações e labels de busca em tool output receberam primeiro lote; preservar conteúdo de mensagens e nomes de ferramentas | Em implementação — validação visual pendente | Sessão nova, sessão existente, erro, carregamento e estado vazio |
 | Compositor e comandos | P0 | `src/app/chat/composer/` | `/help`, comandos e referências inline são operacionais; labels auxiliares são traduzíveis | Pendente | Compositor, anexos, snippets, quick actions e autocomplete |
 | Seletor de idioma e aparência | P0 | `src/components/language-switcher.tsx`, `src/app/settings/` | Fluxo pt-BR já validado parcialmente | Parcialmente validado | Troca, persistência, rollback, tema claro/escuro e escala |
@@ -78,7 +78,7 @@ Estes itens são sinais de investigação, não autorização automática para t
 ```text
 Superfícies inventariadas: 19
 Concluídas com evidência visual: 0
-Parcialmente implementadas: 10
+Parcialmente implementadas: 11
 Parcialmente validadas: 1 (idioma/aparência)
-Pendentes de auditoria visual: 8
+Pendentes de auditoria visual: 7
 ```

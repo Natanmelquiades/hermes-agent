@@ -2310,6 +2310,7 @@ export interface Translations {
     featuredPitch: string
     fireworksPitch: string
     openRouterPitch: string
+    directApiAccess: (provider: string) => string
     apiKeyOptions: Record<string, { short: string; description: string }>
     backToSignIn: string
     getKey: string

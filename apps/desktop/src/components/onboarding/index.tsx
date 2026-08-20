@@ -114,6 +114,8 @@ const API_KEY_OPTIONS: ApiKeyOption[] = [
 // OAuth / external providers are intentionally excluded here — they go through
 // the OAuth picker / sign-in flow, not a pasted key.
 function useApiKeyCatalog(): ApiKeyOption[] {
+  const { t } = useI18n()
+  const directApiAccess = t.onboarding.directApiAccess
   const [rows, setRows] = useState<ModelOptionProvider[]>([])
 
   useEffect(() => {
@@ -161,7 +163,7 @@ function useApiKeyCatalog(): ApiKeyOption[] {
         id: row.slug,
         name: row.name,
         envKey,
-        description: `Direct API access to ${row.name}.`,
+        description: directApiAccess(row.name),
         docsUrl: ''
       })
     }
@@ -171,7 +173,7 @@ function useApiKeyCatalog(): ApiKeyOption[] {
     derived.sort((a, b) => a.name.localeCompare(b.name))
 
     return [...API_KEY_OPTIONS.filter(o => curatedByEnv.has(o.envKey)), ...derived]
-  }, [rows])
+  }, [directApiAccess, rows])
 }
 
 // Exit choreography, mirroring the gateway "connecting" overlay's timing:
