@@ -392,11 +392,11 @@ export const ptBrOverrides: TranslationOverrides = {
       kinds: {
         approval: {
           label: 'Aprovação necessária',
-          description: 'Um comando está esperando que você aprove ou rejeite.'
+          description: 'Um comando aguarda sua aprovação ou rejeição.'
         },
         input: {
           label: 'Entrada necessária',
-          description: 'O Hermes fez uma pergunta ou precisa de uma senha ou segredo.'
+          description: 'O Hermes fez uma pergunta ou precisa de uma senha ou de um segredo.'
         },
         turnDone: {
           label: 'Resposta pronta',
@@ -404,7 +404,7 @@ export const ptBrOverrides: TranslationOverrides = {
         },
         turnError: {
           label: 'Falha no turno',
-          description: 'Erros de turnos em segundo plano.'
+          description: 'Erros ocorridos em turnos em segundo plano.'
         },
         backgroundDone: {
           label: 'Tarefa em segundo plano concluída',
@@ -477,7 +477,7 @@ export const ptBrOverrides: TranslationOverrides = {
         'Reações com emoji no estilo iMessage — reaja às mensagens, e o Hermes também pode reagir às suas.',
       embedsTitle: 'Conteúdo incorporado',
       embedsDesc:
-        'As prévias ricas carregam de sites de terceiros (YouTube, X, …). Perguntar mostra um espaço reservado até você liberar cada uma; Sempre carrega automaticamente; Desligado mantém links simples.',
+        'As prévias ricas carregam de sites de terceiros (YouTube, X, …). A opção “Perguntar” mostra um espaço reservado até você liberar cada uma; “Sempre” carrega automaticamente; “Desativado” mantém apenas links simples.',
       embedsAsk: 'Perguntar',
       embedsAlways: 'Sempre',
       embedsOff: 'Desativado',
@@ -489,7 +489,7 @@ export const ptBrOverrides: TranslationOverrides = {
       themeTitle: 'Tema',
       themeDesc: 'Apenas paletas do Desktop. O modo selecionado é aplicado por cima.',
       themeProfileNote: profile => `Salvo para o perfil ${profile} — cada perfil mantém o próprio tema.`,
-      installTitle: 'Instalar de VS Code',
+      installTitle: 'Instalar tema do VS Code',
       installDesc:
         'Cole o ID de uma extensão do Marketplace (por exemplo, dracula-theme.theme-dracula) para converter o tema de cores dela em uma paleta do Desktop.',
       installPlaceholder: 'publisher.extension',
@@ -502,7 +502,7 @@ export const ptBrOverrides: TranslationOverrides = {
       pet: {
         title: 'Mascote',
         intro:
-          'Adote um mascote animado do petdex que flutua sobre o app e reage ao que o Hermes está fazendo — corre enquanto as ferramentas executam, comemora nos acertos e fica emburrado nos erros.',
+          'Adote um mascote animado do petdex que flutua sobre o app e reage ao que o Hermes está fazendo — corre enquanto as ferramentas são executadas, comemora nos acertos e fica emburrado nos erros.',
         restartHint:
           'Os mascotes precisam de uma reinicialização rápida — o app em execução foi iniciado antes deste recurso existir. Feche e reabra o Hermes, depois volte aqui.',
         on: 'Ativado',
@@ -703,13 +703,13 @@ export const ptBrOverrides: TranslationOverrides = {
         reasoningEffort: 'Esforço de raciocínio dos subagentes'
       },
       updates: {
-        nonInteractiveLocalChanges: 'Alterações locais durante atualização pelo app'
+        nonInteractiveLocalChanges: 'Alterações locais durante a atualização pelo app'
       }
     }),
     fieldDescriptions: defineFieldCopy({
       model: 'Usado em novas conversas, a menos que você escolha outro modelo no compositor.',
       modelContextLength: 'Deixe em 0 para usar a janela de contexto detectada do modelo selecionado.',
-      fallbackProviders: 'Entradas provedor:modelo de reserva para tentar caso o modelo padrão falhe.',
+      fallbackProviders: 'Entradas provedor:modelo de reserva a serem tentadas caso o modelo padrão falhe.',
       display: {
         personality: 'Estilo padrão do assistente em novas sessões.',
         showReasoning: 'Mostra as seções de raciocínio quando o backend as fornece.'
@@ -719,7 +719,7 @@ export const ptBrOverrides: TranslationOverrides = {
         repoScanRoots: 'Pastas a examinar. Deixe vazio para examinar sua pasta pessoal.',
         repoScanExcludePaths: 'Pastas e seus descendentes a ignorar durante a descoberta de repositórios.'
       },
-      timezone: 'Usado quando o Hermes precisa do contexto de hora local. Em branco, usa o fuso horário do sistema.',
+      timezone: 'Usado quando o Hermes precisa do contexto do horário local. Em branco, usa o fuso horário do sistema.',
       agent: {
         imageInputMode: 'Controla como os anexos de imagem são enviados ao modelo.',
         maxTurns: 'Limite máximo de turnos com chamadas de ferramentas antes de o Hermes encerrar uma execução.'
@@ -840,7 +840,7 @@ export const ptBrOverrides: TranslationOverrides = {
       attachmentSizeDesc:
         'Define o tamanho máximo, em MB, de um arquivo local que o Desktop carrega para prévias e anexos de imagem. O padrão é 16. Anexos remotos que não sejam imagens têm um limite separado de 256 MB. Valores muito altos carregam o arquivo inteiro na memória e podem travar ou encerrar o app.',
       attachmentSizeUnit: 'MB',
-      attachmentSizeLabel: 'Tamanho máximo para prévia / carregamento de imagem em megabytes'
+      attachmentSizeLabel: 'Tamanho máximo, em MB, para prévias e carregamento de imagens'
     },
     quickEntry: {
       enabledTitle: 'Entrada rápida',
@@ -854,7 +854,7 @@ export const ptBrOverrides: TranslationOverrides = {
     },
     credentials: {
       pasteKey: 'Colar chave',
-      pasteLabelKey: label => `Colar ${label} chave`,
+      pasteLabelKey: label => `Colar a chave ${label}`,
       optional: 'Opcional',
       enterValueFirst: 'Digite um valor primeiro.',
       couldNotSave: 'Não foi possível salvar a credencial.',
@@ -952,7 +952,7 @@ export const ptBrOverrides: TranslationOverrides = {
       plainTextConfirmAction: 'Salvar como texto simples',
       plainTextStoredTitle: 'Token armazenado em texto simples',
       plainTextStoredDesc:
-        'O armazenamento seguro não está disponível, então o token salvo é armazenado descriptografado no arquivo de configurações de conexão do aplicativo nesta máquina. Instale ou habilite o GNOME Keyring ou o KWallet para criptografá-lo.',
+        'O armazenamento seguro não está disponível, então o token é armazenado sem criptografia no arquivo de configurações de conexão do aplicativo nesta máquina. Instale ou habilite o GNOME Keyring ou o KWallet para armazená-lo de forma criptografada.',
       testRemote: 'Testar remoto',
       saveForRestart: 'Salvar para a próxima reinicialização',
       saveAndReconnect: 'Salvar e reconectar',
@@ -1112,7 +1112,7 @@ export const ptBrOverrides: TranslationOverrides = {
       providerDefault: '(Provedor padrão)',
       fallbackAdd: 'Adicionar fallback',
       fallbackEmpty: 'Nenhum modelo de fallback — o modelo padrão é usado a menos que falhe.',
-      notInCatalog: 'não está na lista de modelos deste provedor — as chamadas podem cair em um reserva.',
+      notInCatalog: 'não está na lista de modelos deste provedor — as chamadas podem recair em um modelo de reserva.',
       tasks: {
         vision: { label: 'Visão', hint: 'Análise de imagem' },
         web_extract: { label: 'Extração da web', hint: 'Resumo de páginas' },
@@ -1137,7 +1137,7 @@ export const ptBrOverrides: TranslationOverrides = {
       disconnectInTerminal: 'Desconectar (executa o comando de remoção no terminal)',
       removeConfirm: provider => `Remover ${provider}?`,
       removeExternalGeneric: provider => `${provider} é gerenciado pela CLI dele — remova por lá.`,
-      removeKeyManaged: provider => `${provider} é configurado por uma chave de API. Remova em Chaves de API.`,
+      removeKeyManaged: provider => `${provider} é configurado por uma chave de API. Remova a chave em Chaves de API.`,
       removeTerminalConfirm: (provider, command) =>
         `Desconectar ${provider}? Isso executa "${command}" no terminal para limpar a credencial.`,
       removeTerminalRunning: provider => `Executando a desconexão de ${provider} no terminal…`,
@@ -1205,7 +1205,7 @@ export const ptBrOverrides: TranslationOverrides = {
       failedSelect: provider => `Falha ao selecionar ${provider}`,
       failedLoad: 'Falha ao carregar a configuração das ferramentas',
       noProviderOptions:
-        'Este conjunto de ferramentas não tem opções de provedor — ative-o e ele funciona com a configuração atual.',
+        'Este conjunto de ferramentas não tem opções de provedor — ative-o para que funcione com a configuração atual.',
       noProviders: 'Nenhum provedor disponível para este conjunto de ferramentas no momento.',
       ready: 'Pronto',
       needsSignIn: 'Requer login',
@@ -1215,14 +1215,14 @@ export const ptBrOverrides: TranslationOverrides = {
       useBackend: 'Usar este backend',
       nousIncluded: 'Incluído com uma assinatura Nous — entre no Nous Portal para ativar.',
       nousAuthNeededTitle: 'Entrar no Nous Portal',
-      nousAuthNeededMessage: provider => `${provider} está salvo, mas só ativa depois que você entrar no Nous Portal.`,
+      nousAuthNeededMessage: provider => `${provider} está salvo, mas só ficará ativo depois que você entrar no Nous Portal.`,
       nousAuthSignIn: 'Entrar',
       nousAuthDoneTitle: 'Nous Portal conectado',
       nousAuthDoneMessage: 'Os backends da sua assinatura estão ativos agora.',
       nousAuthFailed: 'O login no Nous Portal não foi concluído',
       noApiKeyRequired: 'Nenhuma chave de API necessária.',
       postSetupHint: step =>
-        `Este backend precisa de uma instalação única (${step}). Roda nesta máquina — pode levar alguns minutos.`,
+        `Este backend precisa de uma instalação única (${step}). É executado nesta máquina — pode levar alguns minutos.`,
       postSetupInstalledHint: 'Instalado. Refaça a configuração apenas se algo estiver quebrado.',
       postSetupRun: 'Executar configuração',
       postSetupRerun: 'Executar novamente',
@@ -1288,7 +1288,7 @@ export const ptBrOverrides: TranslationOverrides = {
     configured: 'Configurado',
     needsKeys: 'Precisa de chaves',
     visionModelHint:
-      'A visão usa a configuração dos seus modelos auxiliares — o modelo com suporte a imagem é escolhido lá, não por provedor aqui.',
+      'A visão usa a configuração dos seus modelos auxiliares — o modelo com suporte a imagens é escolhido lá, não nesta configuração de provedor.',
     visionModelLink: 'Escolher o modelo de visão em Configurações → Modelos',
     toolsetsEnabled: (enabled, total) => `${enabled}/${total} conjuntos de ferramentas ativos`,
     configureToolset: label => `Configurar ${label}`,
@@ -1420,7 +1420,7 @@ export const ptBrOverrides: TranslationOverrides = {
     workers: count => `${count} ${count === 1 ? 'worker' : 'workers'}`,
     workersActive: count => `${count} ${count === 1 ? 'ativo' : 'ativos'}`,
     agentsCount: count => `${count} ${count === 1 ? 'agente' : 'agentes'}`,
-    activeCount: count => `${count} ativo`,
+    activeCount: count => `${count} ativo${count === 1 ? '' : 's'}`,
     failedCount: count => `${count} ${count === 1 ? 'falha' : 'falhas'}`,
     toolsCount: count => `${count} ferramentas`,
     filesCount: count => `${count} arquivos`,
@@ -1545,7 +1545,7 @@ export const ptBrOverrides: TranslationOverrides = {
     noSessions: 'Nenhuma sessão ainda.',
     gatewayRunning: 'Gateway de mensagens em execução',
     gatewayStopped: 'Gateway de mensagens parado',
-    hermesActiveSessions: (version, count) => `Hermes ${version} · Sessões ativas ${count}`,
+    hermesActiveSessions: (version, count) => `Hermes ${version} · ${count} sessões ativas`,
     restartGateway: 'Reiniciar o gateway',
     gatewayRestartFailed: 'Falha ao reiniciar o gateway.',
     updateHermes: 'Atualizar o Hermes',
@@ -1559,7 +1559,7 @@ export const ptBrOverrides: TranslationOverrides = {
     days: count => `${count}d`,
     statSessions: 'Sessões',
     statApiCalls: 'Chamadas de API',
-    statTokens: 'Tokens entrada/saída',
+    statTokens: 'Tokens de entrada/saída',
     statCost: 'Custo est.',
     actualCost: cost => `real ${cost}`,
     loadingUsage: 'Carregando o uso...',
@@ -1586,7 +1586,7 @@ export const ptBrOverrides: TranslationOverrides = {
       backup: 'Criar cópia de segurança',
       backupDesc: 'Compacta configuração, memórias, habilidades e sessões',
       debugShare: 'Compartilhar depuração',
-      debugShareDesc: 'Envia um relatório redigido + logs e devolve links compartilháveis (apagam sozinhos em 6h)',
+      debugShareDesc: 'Envia um relatório com dados sensíveis ocultados, além de logs, e devolve links compartilháveis (que expiram em 6 h)',
       debugShareRunning: 'Enviando relatório de depuração...',
       debugShareLinks: 'Links de compartilhamento',
       debugShareFailed: 'Falha ao compartilhar a depuração',
@@ -1598,12 +1598,12 @@ export const ptBrOverrides: TranslationOverrides = {
       curatorActive: 'Ativo',
       curatorDisabled: 'Desativado',
       curatorLastRun: when => `Última execução ${when}`,
-      curatorNeverRan: 'Nunca executou',
+      curatorNeverRan: 'Nunca executado',
       pause: 'Pausar',
       resume: 'Retomar',
       runNow: 'Executar agora',
       memoryData: 'Dados de memória',
-      memoryDataDesc: 'Arquivos de memória embutidos injetados em toda sessão',
+      memoryDataDesc: 'Arquivos de memória embutidos, injetados em todas as sessões',
       memoryProvider: name => `Provedor ativo: ${name}`,
       builtinMemory: 'embutida',
       memoryFile: 'Memória do agente (MEMORY.md)',
@@ -1787,7 +1787,7 @@ export const ptBrOverrides: TranslationOverrides = {
     loading: 'Carregando webhooks...',
     loadFailed: 'Falha ao carregar os webhooks',
     subscriptions: (count: number) => `Assinaturas (${count})`,
-    hint: 'As mudanças nas assinaturas são recarregadas a quente assim que o receptor estiver rodando. Assinaturas desativadas rejeitam eventos recebidos.',
+    hint: 'As alterações nas assinaturas são recarregadas automaticamente assim que o receptor estiver em execução. Assinaturas desativadas rejeitam eventos recebidos.',
     empty: 'Nenhuma assinatura de webhook ainda.',
     disabledTitle: 'Receptor de webhooks desativado',
     disabledBody:
@@ -2378,10 +2378,10 @@ export const ptBrOverrides: TranslationOverrides = {
     queueSend: 'enviar',
     queueDelete: 'Excluir',
     queueResume: 'Retomar',
-    queueResumeTip: 'Pausado pelo Parar — retome o envio dos turnos da fila',
+    queueResumeTip: 'Pausado pelo botão “Parar” — retome o envio dos turnos da fila',
     queueStuckTitle: 'Mensagem da fila não enviada',
     queueStuckBody: 'Um turno da fila falhou repetidamente ao enviar. Ele continua na fila — tente enviar de novo.',
-    previewUnavailable: 'Pré-visualizar indisponível',
+    previewUnavailable: 'Prévia indisponível',
     previewLabel: label => `Pré-visualizar ${label}`,
     couldNotPreview: label => `Não foi possível pré-visualizar ${label}`,
     removeAttachment: label => `Remover ${label}`,
@@ -2432,7 +2432,7 @@ export const ptBrOverrides: TranslationOverrides = {
     },
     cronSuggestions: {
       label: 'Agendar isto',
-      tip: phrase => `“${phrase}” parece ser algo recorrente — execute isso de acordo com uma programação`,
+      tip: phrase => `“${phrase}” parece ser algo recorrente — agende isso conforme uma programação`,
       prefix: 'Configurar isto como uma tarefa agendada:',
       done: 'Marcado para agendamento',
       doneTip: 'Envie e o agente criará a tarefa'
@@ -2440,8 +2440,8 @@ export const ptBrOverrides: TranslationOverrides = {
     snippets: {
       codeReview: {
         label: 'Revisão de código',
-        description: 'Audita a mudança atual em busca de regressões, casos de borda esquecidos e testes faltando.',
-        text: 'Por favor, revise isto em busca de bugs, regressões e testes faltando.'
+        description: 'Audita a mudança atual em busca de regressões, casos de borda não cobertos e testes ausentes.',
+        text: 'Por favor, revise isto em busca de bugs, regressões e testes ausentes.'
       },
       implementationPlan: {
         label: 'Plano de implementação',
@@ -2450,7 +2450,7 @@ export const ptBrOverrides: TranslationOverrides = {
       },
       explainThis: {
         label: 'Explique isto',
-        description: 'Percorre como o código selecionado funciona e aponta os arquivos principais.',
+        description: 'Explica como funciona o código selecionado e aponta os arquivos principais.',
         text: 'Por favor, explique como isto funciona e me aponte os arquivos principais.'
       }
     }
@@ -2462,7 +2462,7 @@ export const ptBrOverrides: TranslationOverrides = {
     goalActive: 'Objetivo ativo',
     goalDone: 'Objetivo concluído',
     goalPaused: 'Objetivo pausado',
-    goalWaiting: 'Objetivo aguardando',
+    goalWaiting: 'Objetivo em espera',
     subagents: count => `${count} subagente${count === 1 ? '' : 's'}`,
     todos: (done, total) => `Tarefas ${done}/${total}`,
     running: 'Executando',
@@ -2471,10 +2471,10 @@ export const ptBrOverrides: TranslationOverrides = {
     exit: code => `saída ${code}`,
     coding: {
       title: 'Árvore de trabalho',
-      noBranch: 'Nenhum branch',
-      detached: 'destacado',
+      noBranch: 'Nenhuma branch',
+      detached: 'desanexado',
       clean: 'Limpo',
-      changed: count => `${count} alterados`,
+      changed: count => `${count} arquivo${count === 1 ? '' : 's'} alterado${count === 1 ? '' : 's'}`,
       ahead: count => `${count} à frente`,
       behind: count => `${count} atrás`,
       review: 'Revisar',
@@ -2483,7 +2483,7 @@ export const ptBrOverrides: TranslationOverrides = {
       openFile: 'Abrir arquivo',
       stage: 'Adicionar ao stage',
       unstage: 'Tirar do stage',
-      stageAll: 'Stage todos',
+      stageAll: 'Adicionar todos ao stage',
       viewAsTree: 'Ver como árvore',
       viewAsList: 'Ver como lista',
       revert: 'Reverter',
@@ -2529,7 +2529,7 @@ export const ptBrOverrides: TranslationOverrides = {
       rebuild: 'Reconstruindo o app de desktop…',
       restart: 'Reiniciando o Hermes…',
       done: 'Atualização concluída',
-      manual: 'Atualizar de seu terminal',
+      manual: 'Atualizar pelo terminal',
       guiSkew: 'Atualizar o app de desktop',
       error: 'Atualização pausada'
     },
@@ -2542,16 +2542,16 @@ export const ptBrOverrides: TranslationOverrides = {
     latestBody: 'Você está na versão mais recente.',
     latestBodyBackend: 'O backend está na versão mais recente.',
     allSetTitle: 'Tudo certo',
-    availableTitle: 'Novo atualização disponível',
+    availableTitle: 'Nova atualização disponível',
     availableBody: 'Uma nova versão do Hermes está pronta para instalar.',
-    availableTitleBackend: 'Backend atualização disponível',
+    availableTitleBackend: 'Atualização do backend disponível',
     availableBodyBackend: 'Uma versão mais nova do backend do Hermes conectado está pronta para instalar.',
     availableBodyNoChangelog:
       'Uma versão mais nova está pronta. As notas da versão não estão disponíveis para este tipo de instalação.',
     updateNow: 'Atualizar agora',
     maybeLater: 'Talvez depois',
-    moreChanges: count => `+ ${count} mais alterar${count === 1 ? '' : 's'} included.`,
-    manualTitle: 'Atualizar de seu terminal',
+    moreChanges: count => `+ ${count} alteração${count === 1 ? '' : 'ções'} incluída${count === 1 ? '' : 's'}.`,
+    manualTitle: 'Atualizar pelo terminal',
     manualBody:
       'Você instalou o Hermes pela linha de comando, então as atualizações também rodam por lá. Cole isto no seu terminal:',
     manualPickedUp: 'O Hermes vai carregar a nova versão na próxima vez que você abri-lo.',
@@ -2562,7 +2562,7 @@ export const ptBrOverrides: TranslationOverrides = {
     copied: 'Copiado',
     done: 'Concluído',
     applyingBody:
-      'O atualizador do Hermes assume em uma janela própria e reabre o Hermes automaticamente quando terminar. Não reabra o Hermes enquanto ele estiver atualizando.',
+      'O atualizador do Hermes assume o controle em uma janela própria e reabre o Hermes automaticamente quando terminar. Não reabra o Hermes enquanto ele estiver atualizando.',
     applyingBodyBackend:
       'O backend remoto está aplicando a atualização e vai reiniciar. O Hermes reconecta automaticamente quando ele voltar.',
     applyingClose: 'Esta janela vai fechar durante a atualização e o Hermes reabre sozinho.',
@@ -2571,8 +2571,8 @@ export const ptBrOverrides: TranslationOverrides = {
     notNow: 'Agora não',
     applyStatus: {
       preparing: 'Atualizando backend…',
-      pulling: 'Backend atualizando…',
-      restarting: 'Backend reiniciando para carregar a atualização…',
+      pulling: 'Atualizando o backend…',
+      restarting: 'Reiniciando o backend para carregar a atualização…',
       notAvailable: 'Atualização indisponível para este backend.',
       failed: 'Falha na atualização do backend.',
       noReturn:
@@ -2595,12 +2595,12 @@ export const ptBrOverrides: TranslationOverrides = {
     copyCommand: 'Copiar o comando',
     viewDocs: 'Ver a documentação de instalação',
     installTo: 'Vai instalar em',
-    retryAfterRun: 'Já executei -- tentar de novo',
+    retryAfterRun: 'Já executei — tentar novamente',
     setupChoiceTitle: 'Configurar o Hermes Desktop',
     setupChoiceDesc:
       'Conecte este app a um gateway do Hermes que você já executa, ou instale o Hermes localmente neste computador.',
     connectExistingTitle: 'Conectar a um Hermes existente',
-    connectExistingShort: 'Conectar existente',
+    connectExistingShort: 'Conectar a um Hermes existente',
     connectExistingDesc:
       'Usa um backend remoto com token de sessão ou login pelo navegador. Nenhuma instalação local será iniciada.',
     installLocalTitle: 'Instalar o Hermes localmente',
@@ -2623,7 +2623,7 @@ export const ptBrOverrides: TranslationOverrides = {
     signInWith: provider => `Entrar com ${provider}`,
     enterUrlFirst: 'Informe uma URL de gateway primeiro.',
     signInIncomplete: 'A janela de login foi fechada antes de a autenticação terminar.',
-    tokenTitle: 'token da sessão',
+    tokenTitle: 'Token da sessão',
     tokenDesc: 'Cole o token de sessão do arquivo .env do gateway remoto.',
     pasteSessionToken: 'Colar token da sessão',
     incompleteSignInTest: 'Entre antes de testar este gateway protegido por OAuth.',
