@@ -574,6 +574,7 @@ export function ConnectionsRegistrySection() {
           // Display-only: this connection is a second address for a backend
           // already registered under another entry (same install_id).
           const sameBackendPeer = sameBackendPeerLabel(conn, sortedConnections)
+          const displayLabel = conn.kind === 'local' && conn.label === 'This device' ? s.localDeviceLabel : conn.label
 
           const baseDescription =
             conn.kind === 'ssh'
@@ -632,7 +633,7 @@ export function ConnectionsRegistrySection() {
               title={
                 <span className="flex items-center gap-2">
                   <Icon className="size-4 shrink-0 text-muted-foreground" />
-                  <span className="truncate">{conn.label}</span>
+                  <span className="truncate">{displayLabel}</span>
                   {isCurrent && <Pill tone="primary">{s.currentPill}</Pill>}
                   {isPrimary && <Pill>{s.primaryPill}</Pill>}
                   {conn.kind === 'local' && <Pill>{s.managedPill}</Pill>}

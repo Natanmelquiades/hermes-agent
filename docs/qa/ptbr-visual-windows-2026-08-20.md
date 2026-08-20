@@ -51,3 +51,11 @@
 - `npm run validate:port-denylist`: não executável; o script não existe no `apps/desktop/package.json` nem no `package.json` raiz.
 - `npm test`: não passou — 31 falhas e 6.769 testes passaram em 6.804 executados. As falhas abrangem fixtures Electron/Windows, billing, formatação dependente de locale e o fixture conhecido de truncamento; não foram tratadas como regressões desta alteração.
 - Testes direcionados de Skills/toolset/i18n: passaram — 64 testes.
+
+## Gateway e Connections
+
+- `Conexão do gateway`, modos local/Cloud/remoto/SSH, diagnóstico e ações de reconexão foram observados em pt-BR.
+- O label persistido `This device` é exibido como `Este dispositivo` somente na camada visual; o ID/valor operacional continua `local`/`This device`.
+- O editor remoto foi aberto sem salvar: `Nome`, `URL do gateway`, autenticação, token da sessão, cabeçalhos extras e ações aparecem em pt-BR.
+- Placeholders, hosts, URLs, `OAuth`, `WebSocket`, `CF-Access-Client-Id` e demais identificadores técnicos foram preservados.
+- Evidências: `evidence/ptbr-gateway.png` e `evidence/ptbr-connection-editor.png`.

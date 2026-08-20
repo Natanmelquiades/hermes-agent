@@ -635,6 +635,7 @@ export interface Translations {
       kindRemoteDesc: string
       kindCloudDesc: string
       kindSshDesc: string
+      localDeviceLabel: string
       labelTitle: string
       labelDesc: string
       labelPlaceholder: string

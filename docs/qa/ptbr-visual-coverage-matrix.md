@@ -27,8 +27,8 @@
 | Modelos e providers | P0 | `src/app/settings/model-settings.tsx`, `src/components/onboarding/providers.tsx` | Mixture of Agents recebeu labels tipados; tela visualizada em pt-BR; nomes de providers/modelos permanecem | Parcialmente validado — fluxos com backend/credenciais ainda pendentes | Seleção, fallback, credenciais e mensagens de erro |
 | Ferramentas e skills | P1 | `src/app/skills/`, configurações de toolsets | Badges de proveniência `learned`/`hub` agora usam `skills.provenance`; o restante da superfície ainda será auditado | Em implementação — validação visual pendente | Ativar/desativar, busca, ordenação, configuração e estados vazios |
 | MCP | P1 | `src/app/skills/mcp-tab.tsx`, `src/components/assistant-ui/mcp-setup-tool.tsx` | Auditoria encontrou uso consistente de `t.settings.mcp`; `OAuth`, `API key`, transportes, JSON, env vars e nomes de servidores são técnicos | Auditada estruturalmente — validação visual pendente | Adicionar, remover, conectar, falhar e deep link |
-| Gateway e webhooks | P1 | `src/app/settings/gateway-settings.tsx`, superfícies de webhooks | Catálogo pt-BR já contém mensagens; conferir telas hardcoded | Pendente | Conectar, desconectar, status, webhooks e erros |
-| Connections e perfis | P1 | `src/app/settings/connections-registry.tsx`, `src/app/profiles/` | Placeholders e hosts são dados; labels e descrições são traduzíveis | Pendente | Criar/editar/remover, remoto/local e validação |
+| Gateway e webhooks | P1 | `src/app/settings/gateway-settings.tsx`, superfícies de webhooks | Modos, diagnóstico, reconexão e status visualizados em pt-BR; webhooks e fluxos autenticados ainda pendentes | Parcialmente validado | Conectar, desconectar, status, webhooks e erros |
+| Connections e perfis | P1 | `src/app/settings/connections-registry.tsx`, `src/app/profiles/` | Editor local/remoto visualizado em pt-BR; `This device` recebe label visual localizado; placeholders/hosts permanecem dados | Parcialmente validado | Criar/editar/remover, remoto/local e validação |
 | Memória | P1 | `src/app/settings/memory/` | `provider-config-panel.tsx` migrou loading, retry, configuração e status de campos para `t.ui` | Em implementação — validação visual pendente | Provider, dados, habilitar/desabilitar e erros |
 | Computer Use | P1 | `src/app/settings/computer-use-panel.tsx` | Status, permissões, provider e estados do `cua-driver` receberam superfície tipada e foram visualizados em pt-BR | Parcialmente validado — plataformas/permissões alternativas ainda pendentes | Windows/Linux/macOS, permissões, driver health e erros |
 | Uninstall / Danger zone | P1 | `src/app/settings/uninstall-section.tsx` | Modalidades gui/lite/full e confirmação usam cópia tipada; zona de perigo visualizada em pt-BR; dados do caminho permanecem dinâmicos | Parcialmente validado — confirmação destrutiva não executada | Opções, confirmação destrutiva, erro e encerramento do app |
@@ -79,6 +79,6 @@ Estes itens são sinais de investigação, não autorização automática para t
 Superfícies inventariadas: 19
 Concluídas com evidência visual: 0
 Parcialmente implementadas: 11
-Parcialmente validadas: 4 (idioma/aparência, modelos/providers, Computer Use, uninstall)
-Pendentes de auditoria visual: 4
+Parcialmente validadas: 6 (idioma/aparência, modelos/providers, Computer Use, uninstall, Gateway, Connections)
+Pendentes de auditoria visual: 13
 ```

@@ -3716,6 +3716,7 @@ const ptBrSupplement: TranslationOverrides = {
       kindRemoteDesc: 'Um gateway Hermes acessível por HTTP(S) — rede local, Tailscale ou internet.',
       kindCloudDesc: 'Uma instância hospedada descoberta pela sua conta Hermes Cloud.',
       kindSshDesc: 'Uma instalação do Hermes acessada por SSH.',
+      localDeviceLabel: 'Este dispositivo',
       labelTitle: 'Nome',
       labelDesc:
         'Obrigatório. Exibido em todos os lugares onde esta instância aparece; deve ser exclusivo, por exemplo “Homelab” ou “Notebook de trabalho”.',

@@ -964,6 +964,7 @@ export const zh: Translations = {
       kindRemoteDesc: '可通过 HTTP(S) 访问的 Hermes 网关——局域网、Tailscale 或互联网。',
       kindCloudDesc: '通过你的 Hermes Cloud 账户发现的托管实例。',
       kindSshDesc: '通过 SSH 访问的 Hermes 安装。',
+      localDeviceLabel: '此设备',
       labelTitle: '名称',
       labelDesc: '必填。此实例出现的所有位置都会显示该名称；必须唯一（例如“家庭服务器”、“工作笔记本”）。',
       labelPlaceholder: '家庭服务器',
