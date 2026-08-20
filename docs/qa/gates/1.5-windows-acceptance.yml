@@ -1,0 +1,14 @@
+schema: 1
+story: '1.5'
+gate: CONCERNS
+status_reason: 'A troca visual para pt-BR e os atributos lang/dir passaram no Electron isolado; persistência E2E ficou limitada pela ausência de backend/configuração na instância fake, enquanto o fluxo unitário passa.'
+reviewer: 'Quinn / Orion'
+reviewed_revision: 'branch:feat/desktop-pt-br'
+updated: '2026-08-20T06:27:34-03:00'
+top_issues:
+  - id: 'E2E-1.5-001'
+    severity: medium
+    finding: 'A instância fake isolada reiniciou sem backend/configuração e voltou ao inglês.'
+    suggested_action: 'Repetir em instalação Windows com gateway local configurado antes de uma publicação upstream.'
+waiver:
+  active: false

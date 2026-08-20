@@ -1,0 +1,48 @@
+# AIOX project configuration for Hermes Desktop pt-BR localization.
+# This file configures the Hermes-native AIOX workflow artifacts only.
+version: 5.4.1
+project:
+  name: hermes-desktop-ptbr
+  type: brownfield
+  repository: NousResearch/hermes-agent
+  scope: desktop-windows
+
+prdSharded: true
+prdShardedLocation: docs/prd
+architectureSharded: true
+architectureShardedLocation: docs/architecture
+devStoryLocation: docs/stories
+storyBacklogLocation: docs/backlog/hermes-desktop-pt-br-backlog-map.md
+qaLocation: docs/qa
+
+workflow:
+  current: brownfield-fullstack
+  mode: strict
+  requireApprovalBeforeRemoteWrite: true
+  requireBaselineBeforeImplementation: true
+  requireQualityGate: true
+  requireWindowsAcceptance: true
+
+projectStatus:
+  enabled: true
+  autoLoadOnAgentActivation: true
+  showInGreeting: true
+  statusFile: .aiox/project-status.yaml
+
+coderabbit_integration:
+  enabled: false
+  reason: CodeRabbit is not configured in this local checkout; use manual QA gates.
+
+execution:
+  worktreeIsolation: true
+  maxParallelStories: 1
+  autoPush: false
+  autoMerge: false
+  remoteWrites: false
+
+localeProject:
+  canonicalLocale: pt-br
+  displayName: Português (Brasil)
+  target: Hermes Desktop
+  validationPlatform: Windows
+  backendInScope: false

@@ -40,4 +40,30 @@ describe('LanguageSwitcher', () => {
     await waitFor(() => expect(saveConfig).toHaveBeenCalledTimes(1))
     expect(saveConfig).toHaveBeenCalledWith({ display: { language: 'ja', skin: 'slate' } })
   })
+
+  it('offers and persists Português (Brasil)', async () => {
+    const saveConfig = vi.fn().mockResolvedValue({ ok: true })
+    const latestConfig: HermesConfigRecord = { display: { language: 'en' } }
+
+    const configClient: I18nConfigClient = {
+      getConfig: vi.fn().mockResolvedValue(latestConfig),
+      saveConfig
+    }
+
+    render(
+      <I18nProvider configClient={configClient}>
+        <LanguageSwitcher />
+      </I18nProvider>
+    )
+
+    await waitFor(() => {
+      expect(screen.getByRole('button', { name: 'Switch language' }).hasAttribute('disabled')).toBe(false)
+    })
+
+    fireEvent.click(screen.getByRole('button', { name: 'Switch language' }))
+    fireEvent.click(screen.getByRole('option', { name: /Português \(Brasil\)/i }))
+
+    await waitFor(() => expect(saveConfig).toHaveBeenCalledTimes(1))
+    expect(saveConfig).toHaveBeenCalledWith({ display: { language: 'pt-br' } })
+  })
 })

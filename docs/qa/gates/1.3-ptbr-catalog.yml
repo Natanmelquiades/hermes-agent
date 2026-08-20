@@ -1,0 +1,10 @@
+schema: 1
+story: '1.3'
+gate: PASS
+status_reason: 'O catálogo pt-BR foi reconciliado com a main atual, cobre todos os caminhos estáticos do catálogo inglês e compila via defineLocale com auditoria de cobertura igual a zero.'
+reviewer: 'Aria / Quinn'
+reviewed_revision: 'branch:feat/desktop-pt-br'
+updated: '2026-08-20T06:27:34-03:00'
+top_issues: []
+waiver:
+  active: false

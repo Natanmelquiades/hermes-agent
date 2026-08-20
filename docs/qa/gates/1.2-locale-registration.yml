@@ -1,0 +1,10 @@
+schema: 1
+story: '1.2'
+gate: PASS
+status_reason: 'pt-br foi registrado no tipo Locale, no seletor, no catálogo e na normalização; typecheck e lint do Desktop passam.'
+reviewer: 'Aria / Quinn'
+reviewed_revision: 'branch:feat/desktop-pt-br'
+updated: '2026-08-20T06:27:34-03:00'
+top_issues: []
+waiver:
+  active: false
