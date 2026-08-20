@@ -925,6 +925,41 @@ export interface Translations {
       }
       loading: string
     }
+    customEndpoints: {
+      loading: string
+      loadFailed: string
+      title: string
+      active: string
+      apiKeySet: string
+      use: string
+      delete: string
+      deleteTitle: (name: string) => string
+      emptyTitle: string
+      emptyDescription: string
+      editTitle: string
+      addTitle: string
+      name: string
+      providerId: string
+      endpointUrl: string
+      defaultModel: string
+      context: string
+      apiKey: string
+      keepCurrentKey: string
+      optional: string
+      useForNewChats: string
+      discoverModels: string
+      test: string
+      testing: string
+      save: string
+      saving: string
+      newEndpoint: string
+      reachableWithModels: (count: number) => string
+      reachable: string
+      validationFailed: string
+      saveFailed: string
+      activationFailed: string
+      deleteFailed: string
+    }
     sessions: {
       loading: string
       archivedTitle: string
