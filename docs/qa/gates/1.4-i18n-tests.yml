@@ -1,0 +1,10 @@
+schema: 1
+story: '1.4'
+gate: PASS
+status_reason: 'Cinco arquivos e 27 testes direcionados de locale, contexto, runtime, completude e seletor passaram; typecheck também passa.'
+reviewer: 'Quinn'
+reviewed_revision: 'branch:feat/desktop-pt-br'
+updated: '2026-08-20T06:27:34-03:00'
+top_issues: []
+waiver:
+  active: false

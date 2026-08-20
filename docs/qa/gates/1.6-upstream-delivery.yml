@@ -1,0 +1,18 @@
+schema: 1
+story: '1.6'
+gate: CONCERNS
+status_reason: 'A entrega local foi preparada, o build/typecheck/lint/testes direcionados passam e o diff foi auditado; publicação upstream permanece bloqueada por coordenação remota e pela limitação de persistência E2E sem backend configurado.'
+reviewer: 'Orion / Aria / Quinn'
+reviewed_revision: 'branch:feat/desktop-pt-br'
+updated: '2026-08-20T06:42:19-03:00'
+top_issues:
+  - id: 'UPSTREAM-1.6-001'
+    severity: medium
+    finding: 'Issue/PR upstream ainda não recebeu coordenação ou publicação automática.'
+    suggested_action: 'Revisar a entrega e autorizar uma ação remota separada.'
+  - id: 'E2E-1.6-001'
+    severity: medium
+    finding: 'Persistência após reinício não foi confirmada na instância fake sem backend.'
+    suggested_action: 'Repetir em instalação Windows com gateway configurado.'
+waiver:
+  active: false

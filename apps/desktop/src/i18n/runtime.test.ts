@@ -24,6 +24,15 @@ describe('desktop i18n runtime translator', () => {
     expect(translateNow('assistant.tool.statusRecovered')).toBe('已恢复')
   })
 
+  it('translates Brazilian Portuguese string and interpolation paths', () => {
+    setRuntimeI18nLocale('pt-br')
+
+    expect(translateNow('language.label')).toBe('Idioma')
+    expect(translateNow('common.save')).toBe('Salvar')
+    expect(translateNow('titlebar.unreadSessions', 2)).toBe('2 sessões não lidas')
+    expect(translateNow('preview.web.goBack')).toBe('Voltar')
+  })
+
   it('passes arguments to function translations', () => {
     expect(translateNow('notifications.updateReadyMessage', 2)).toBe('2 new changes available.')
   })

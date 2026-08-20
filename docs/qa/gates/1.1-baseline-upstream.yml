@@ -1,0 +1,18 @@
+schema: 1
+story: '1.1'
+gate: CONCERNS
+status_reason: 'Typecheck e lint passam na main; a suíte de plataformas possui 26 falhas preexistentes relacionadas ao ambiente Windows/MSYS e há 6 vulnerabilidades altas no audit do estado atual.'
+reviewer: 'Orion / QA baseline'
+reviewed_revision: 'commit:27562ad5f80e90f7d552f92dbd4af7f1f511c3c8'
+updated: '2026-08-20T05:50:27-03:00'
+top_issues:
+  - id: 'TEST-BASELINE-001'
+    severity: medium
+    finding: '26 falhas na suíte Electron no baseline Windows/MSYS.'
+    suggested_action: 'Isolar como baseline; não alterar dentro da story pt-BR.'
+  - id: 'SEC-BASELINE-001'
+    severity: high
+    finding: 'npm audit reporta 6 vulnerabilidades altas na árvore de dependências atual.'
+    suggested_action: 'Tratar em iniciativa de dependências separada; não executar npm audit fix neste escopo.'
+waiver:
+  active: false
