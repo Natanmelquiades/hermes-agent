@@ -4,6 +4,7 @@ import { PageLoader } from '@/components/page-loader'
 import { Button } from '@/components/ui/button'
 import { DisclosureCaret } from '@/components/ui/disclosure-caret'
 import { getMemoryProviderConfig, saveMemoryProviderConfig } from '@/hermes'
+import { useI18n } from '@/i18n'
 import { SlidersHorizontal } from '@/lib/icons'
 import { notifyError } from '@/store/notifications'
 import type { MemoryProviderConfig, MemoryProviderField } from '@/types/hermes'
@@ -21,6 +22,7 @@ function seedValues(config: MemoryProviderConfig): Record<string, string> {
 }
 
 export function ProviderConfigPanel({ profile = null, provider }: { profile?: null | string; provider: string }) {
+  const { t } = useI18n()
   const [config, setConfig] = useState<MemoryProviderConfig | null>(null)
   const [loadError, setLoadError] = useState<null | string>(null)
   const [values, setValues] = useState<Record<string, string>>({})
@@ -87,16 +89,16 @@ export function ProviderConfigPanel({ profile = null, provider }: { profile?: nu
       return (
         <div className="flex items-center justify-between gap-3 py-2">
           <span className="text-[length:var(--conversation-caption-font-size)] text-muted-foreground">
-            Memory provider settings failed to load: {loadError}
+            {t.ui.memoryProviderSettingsFailed(loadError)}
           </span>
           <Button onClick={() => void refresh()} size="sm" type="button" variant="secondary">
-            Retry
+            {t.ui.retry}
           </Button>
         </div>
       )
     }
 
-    return <PageLoader className="min-h-24" label="Loading memory provider settings..." />
+    return <PageLoader className="min-h-24" label={t.ui.loadingMemoryProviderSettings} />
   }
 
   const inlineFields = config.fields.filter(field => field.inline)
@@ -114,16 +116,16 @@ export function ProviderConfigPanel({ profile = null, provider }: { profile?: nu
         >
           <DisclosureCaret open={expanded} />
           <span className="text-[length:var(--conversation-text-font-size)] font-medium text-foreground">
-            {config.label} settings
+            {t.ui.configSettings(config.label)}
           </span>
           {secretFields.map(field => (
-            <Pill key={field.key}>{field.is_set ? `${field.label} set` : `${field.label} not set`}</Pill>
+            <Pill key={field.key}>{field.is_set ? t.ui.fieldSet(field.label) : t.ui.fieldNotSet(field.label)}</Pill>
           ))}
         </button>
         {hasFullConfig && (
           <Button onClick={() => setShowModal(true)} size="sm" type="button" variant="secondary">
             <SlidersHorizontal className="size-3.5" />
-            Full config…
+            {t.ui.fullConfig}
           </Button>
         )}
       </div>

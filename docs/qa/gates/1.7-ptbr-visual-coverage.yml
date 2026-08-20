@@ -1,0 +1,48 @@
+story: '1.7'
+title: 'Cobertura visual e migração de strings de interface pt-BR'
+status: IN_PROGRESS
+branch: 'work/desktop-ptbr-visual-coverage'
+base: 'origin/main@c47f0b4590'
+checkpoint: 'f71932021b'
+owner: '@dev'
+quality_gate: '@qa'
+
+scope:
+  - 'Inventário visual das superfícies P0/P1 do Hermes Desktop'
+  - 'Classificação de strings hardcoded traduzíveis versus técnicas/dinâmicas'
+  - 'Migração para o mecanismo i18n existente'
+  - 'Validação visual no Windows/Electron'
+
+checks:
+  structural_catalog:
+    status: PASS
+    evidence: 'apps/desktop/src/i18n/catalog.test.ts — auditoria anterior: missing=0'
+  targeted_i18n_tests:
+    status: PASS
+    evidence: '6 arquivos / 29 testes passaram após o primeiro lote da Story 1.7'
+  visual_matrix:
+    status: IN_PROGRESS
+    evidence: 'docs/qa/ptbr-visual-coverage-matrix.md'
+  hardcoded_string_audit:
+    status: IN_PROGRESS
+    evidence: 'Inventário inicial registrado na matriz; primeiro lote migrado para a seção Translations.ui'
+  windows_visual_acceptance:
+    status: PENDING
+    evidence: 'Aguardando execução por superfície'
+  typecheck_lint_build:
+    status: PARTIAL
+    evidence: 'typecheck e lint passam; build ainda será executado após o lote'
+  upstream_pull_request:
+    status: BLOCKED
+    evidence: 'Nenhum PR ou merge no repositório oficial nesta etapa'
+
+known_baseline_concerns:
+  - 'Suíte completa do repositório possui falhas preexistentes no ambiente Windows/MSYS/WSL/SSH/permissões.'
+  - 'npm audit da main reporta vulnerabilidades transitivas fora do escopo da localização.'
+  - 'Persistência E2E com backend Hermes real ainda requer validação separada.'
+
+exit_criteria:
+  - 'Matriz com evidência visual para todas as superfícies P0/P1'
+  - 'Strings traduzíveis migradas sem alterar dados operacionais'
+  - 'Testes focados, typecheck, lint e build sem regressão pt-BR'
+  - 'Gate QA atualizado de DRAFT para PASS ou CONCERNS com evidência'

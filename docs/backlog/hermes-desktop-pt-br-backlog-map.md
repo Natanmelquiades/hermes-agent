@@ -1,6 +1,6 @@
 # Mapa de Backlog — Hermes Desktop pt-BR
 
-> **Status:** Implementação local concluída — publicação upstream bloqueada
+> **Status:** Cobertura visual em andamento — publicação upstream bloqueada
 > **Fonte:** [`../prd/hermes-desktop-pt-br-prd.md`](../prd/hermes-desktop-pt-br-prd.md)
 > **Escopo:** Hermes Desktop; validação inicial no Windows
 > **Locale canônico:** `pt-br` — **Português (Brasil)**
@@ -10,13 +10,15 @@
 
 ## 1. Objetivo deste mapa
 
-Este documento organiza a sequência de trabalho necessária para tornar pt-BR um locale oficial do Hermes Desktop. Ele **não cria stories de implementação**, não cria tarefas remotas, não altera o repositório Hermes e não substitui o processo AIOX completo de épicos/stories.
+Este documento organiza a sequência de trabalho necessária para tornar pt-BR um locale oficial do Hermes Desktop. Ele **não cria stories de implementação**, não cria tarefas remotas, não altera o repositório oficial Hermes e não substitui o processo AIOX completo de épicos/stories. O checkpoint técnico autorizado foi publicado somente no fork pessoal.
 
-A criação de stories detalhadas permanece bloqueada porque:
+A criação de stories detalhadas está liberada para o trabalho local porque o checkout possui `.aiox-core/core-config.yaml`, o gate técnico foi executado e a Story 1.7 foi criada em branch separada. A publicação upstream continua bloqueada até a cobertura visual e a coordenação com os mantenedores.
 
-1. o diretório atual não possui `aiox-core/core-config.yaml`, requisito do workflow AIOX de stories;
-2. o PRD determina coordenação upstream e um gate técnico antes de implementação;
-3. a PR upstream #86292 foi verificada como incompatível com a `main` analisada e não deve ser usada como base direta.
+As restrições que permanecem são:
+
+1. o PRD exige coordenação upstream antes de abrir uma contribuição formal;
+2. a PR upstream #86292 foi verificada como incompatível com a `main` analisada e não deve ser usada como base direta;
+3. nenhum PR ou merge no repositório oficial é permitido nesta etapa.
 
 ---
 
@@ -31,7 +33,7 @@ Nenhum item de implementação pode passar para **Pronto para story** até que t
 - [x] Falhas preexistentes e falhas dependentes do locale do host separadas das regressões introduzidas pelo pt-BR.
 - [x] Autorização explícita para iniciar implementação recebida.
 
-**Estado atual do gate:** ✅ **Execução local concluída; publicação remota bloqueada**
+**Estado atual do gate:** ✅ **Checkpoint publicado no fork pessoal; cobertura visual em andamento; publicação upstream bloqueada**
 
 ---
 
@@ -46,7 +48,8 @@ Nenhum item de implementação pode passar para **Pronto para story** até que t
 | 4 | BL-04 — Catálogo pt-BR completo e revisão linguística | Conteúdo/UI | ✅ Concluído com revisão final | BL-02 + autorização | Catálogo completo estruturalmente e revisado. |
 | 5 | BL-05 — Cobertura automatizada de i18n | Qualidade | ✅ Concluído | BL-03 + BL-04 | 27 testes direcionados passaram; completude 0 ausências. |
 | 6 | BL-06 — Aceitação manual no Windows | QA | ✅ Concluído com CONCERNS | BL-05 | Troca visual passou; persistência E2E requer backend configurado. |
-| 7 | BL-07 — Preparação de contribuição upstream | Entrega | 🚧 Preparado localmente | BL-00 a BL-06 | Relatório e diff local prontos; publicação remota não executada. |
+| 7 | BL-07 — Preparação de contribuição upstream | Entrega | 🚧 Checkpoint no fork; PR upstream bloqueada | BL-00 a BL-06 | Branch de checkpoint publicada no fork; nenhum PR/merge oficial. |
+| 8 | BL-08 — Cobertura visual e strings hardcoded | Qualidade/UI | 🔄 Em andamento | BL-03 a BL-07 | Matriz por tela e Story 1.7; migração visual ainda pendente. |
 
 ---
 
@@ -154,6 +157,22 @@ Nenhum item de implementação pode passar para **Pronto para story** até que t
   - [ ] issue/PRs relacionados são referenciados;
   - [ ] a descrição não promete merge, release ou aprovação da Nous Research.
 
+### BL-08 — Cobertura visual e strings hardcoded
+
+- **Objetivo:** confirmar que os textos visíveis do Desktop realmente passam pelo mecanismo i18n e que a experiência em Português (Brasil) não fica parcialmente em inglês.
+- **Fonte:** Story 1.7 e `docs/qa/ptbr-visual-coverage-matrix.md`.
+- **Executor recomendado:** @dev, com quality gate @qa e revisão arquitetural quando houver mudança de fronteira.
+- **Branch de trabalho:** `work/desktop-ptbr-visual-coverage`, baseada na `origin/main` atual e integrada ao checkpoint `f71932021b`.
+- **Escopo:** telas P0/P1, strings hardcoded em TSX/TS, labels de acessibilidade, placeholders, tooltips, estados vazios/erro/carregamento e validação visual Windows/Electron.
+- **Restrições:** preservar comandos, IDs, URLs, protocolos, providers/modelos, nomes técnicos, logs e conteúdo dinâmico; não criar mecanismo i18n paralelo.
+- **Critérios de aceite:**
+  - [ ] matriz de cobertura atualizada com evidência por tela;
+  - [ ] candidatos hardcoded classificados como traduzíveis ou técnicos/dinâmicos;
+  - [ ] strings traduzíveis migradas para o catálogo existente;
+  - [ ] testes focados e validação visual passam;
+  - [ ] falhas gerais preexistentes continuam separadas e documentadas;
+  - [ ] nenhum PR/merge no repositório oficial sem nova autorização explícita.
+
 ---
 
 ## 5. Matriz de rastreabilidade
@@ -165,11 +184,11 @@ Nenhum item de implementação pode passar para **Pronto para story** até que t
 | FR-003 — Catálogo completo e tipado | BL-02, BL-04, BL-05 |
 | FR-004 — Troca em runtime | BL-03, BL-05, BL-06 |
 | FR-005 — Fallback seguro | BL-04, BL-05 |
-| FR-006 — Cobertura Desktop | BL-02, BL-04, BL-06 |
+| FR-006 — Cobertura Desktop | BL-02, BL-04, BL-06, BL-08 |
 | FR-007 — Integridade operacional | BL-02, BL-04, BL-05, BL-06 |
 | NFR-007 — Fonte de verdade | BL-01, BL-02, BL-05 |
 | NFR-008 — Baseline reproduzível | BL-01, BL-05 |
-| NFR-009 — Segurança do diff | BL-02, BL-07 |
+| NFR-009 — Segurança do diff | BL-02, BL-07, BL-08 |
 
 ---
 

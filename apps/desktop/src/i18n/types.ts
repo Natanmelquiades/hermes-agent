@@ -2877,5 +2877,38 @@ export interface Translations {
       description: string
       toggle: (open: boolean) => string
     }
+    openFullView: string
+    zoomOut: string
+    resetView: string
+    zoomIn: string
+    close: string
+    copy: string
+    copied: string
+    moreActions: string
+    searchEmoji: string
+    loadingEmoji: string
+    noEmojiFound: string
+    moreEmoji: string
+    removeReaction: (emoji: string) => string
+    reactedByHermes: string
+    conversationTimeline: string
+    hatchingProgress: string
+    messagePlaceholder: string
+    openInHermes: string
+    loadingMemoryProviderSettings: string
+    memoryProviderSettingsFailed: (message: string) => string
+    retry: string
+    dangerZone: string
+    checkingInstalled: string
+    confirmUninstall: string
+    thisRemoves: (consequence: string) => string
+    yesUninstall: string
+    uninstalling: string
+    uninstallHermes: string
+    uninstallDescription: string
+    configSettings: (label: string) => string
+    fieldSet: (label: string) => string
+    fieldNotSet: (label: string) => string
+    fullConfig: string
   }
 }

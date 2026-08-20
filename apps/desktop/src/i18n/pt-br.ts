@@ -385,7 +385,8 @@ export const ptBrOverrides: TranslationOverrides = {
     },
     notifications: {
       title: 'Notificações',
-      intro: 'Notificações do sistema operacional — não são avisos dentro do aplicativo. A configuração é feita por dispositivo.',
+      intro:
+        'Notificações do sistema operacional — não são avisos dentro do aplicativo. A configuração é feita por dispositivo.',
       enableAll: 'Ativar notificações',
       enableAllDesc: 'Desativar esta opção silencia todas as notificações abaixo.',
       focusedHint: 'Os avisos de conclusão só aparecem enquanto o Hermes está em segundo plano.',
@@ -458,7 +459,8 @@ export const ptBrOverrides: TranslationOverrides = {
       colorMode: 'Modo de cor',
       colorModeDesc: 'Escolha um modo fixo ou deixe o Hermes seguir a configuração do sistema.',
       toolViewTitle: 'Exibição das chamadas de ferramenta',
-      toolViewDesc: 'O modo Produto oculta os dados brutos das ferramentas; o modo Técnico mostra a entrada e a saída completas.',
+      toolViewDesc:
+        'O modo Produto oculta os dados brutos das ferramentas; o modo Técnico mostra a entrada e a saída completas.',
       uiScaleTitle: 'Escala da interface',
       uiScaleDesc: (percent: number) =>
         `Redimensiona textos e controles em todo o app. Cmd/Ctrl com +, - e 0 também funciona. Atual: ${percent}%.`,
@@ -1215,7 +1217,8 @@ export const ptBrOverrides: TranslationOverrides = {
       useBackend: 'Usar este backend',
       nousIncluded: 'Incluído com uma assinatura Nous — entre no Nous Portal para ativar.',
       nousAuthNeededTitle: 'Entrar no Nous Portal',
-      nousAuthNeededMessage: provider => `${provider} está salvo, mas só ficará ativo depois que você entrar no Nous Portal.`,
+      nousAuthNeededMessage: provider =>
+        `${provider} está salvo, mas só ficará ativo depois que você entrar no Nous Portal.`,
       nousAuthSignIn: 'Entrar',
       nousAuthDoneTitle: 'Nous Portal conectado',
       nousAuthDoneMessage: 'Os backends da sua assinatura estão ativos agora.',
@@ -1586,7 +1589,8 @@ export const ptBrOverrides: TranslationOverrides = {
       backup: 'Criar cópia de segurança',
       backupDesc: 'Compacta configuração, memórias, habilidades e sessões',
       debugShare: 'Compartilhar depuração',
-      debugShareDesc: 'Envia um relatório com dados sensíveis ocultados, além de logs, e devolve links compartilháveis (que expiram em 6 h)',
+      debugShareDesc:
+        'Envia um relatório com dados sensíveis ocultados, além de logs, e devolve links compartilháveis (que expiram em 6 h)',
       debugShareRunning: 'Enviando relatório de depuração...',
       debugShareLinks: 'Links de compartilhamento',
       debugShareFailed: 'Falha ao compartilhar a depuração',
@@ -2569,6 +2573,14 @@ export const ptBrOverrides: TranslationOverrides = {
     errorTitle: 'A atualização não foi concluída',
     errorBody: 'Nada foi perdido. Você pode tentar de novo agora.',
     notNow: 'Agora não',
+    clientAlsoBehindTitle: 'O app de desktop está desatualizado',
+    clientAlsoBehindMessage:
+      'O backend está atualizado, mas este app de desktop ainda usa uma versão antiga. Atualize-o para obter as correções mais recentes.',
+    clientAlsoBehindAction: 'Atualizar o app de desktop',
+    everythingDispatched: 'Atualização enviada',
+    everythingSkipped: 'Ignorada',
+    everythingRowFailed: 'Falha na atualização',
+    everythingFanoutFailedTitle: 'Não foi possível atualizar outras instâncias',
     applyStatus: {
       preparing: 'Atualizando backend…',
       pulling: 'Atualizando o backend…',
@@ -3161,7 +3173,8 @@ export const ptBrOverrides: TranslationOverrides = {
       catalogSource: 'Do catálogo aprovado pela Nous',
       envRequired: 'Preencha primeiro as credenciais obrigatórias',
       sendFailed: 'Não foi possível enviar a resposta da configuração MCP',
-      reloadFailed: 'Servidor salvo, mas não foi possível recarregar as ferramentas MCP — elas serão carregadas na próxima sessão',
+      reloadFailed:
+        'Servidor salvo, mas não foi possível recarregar as ferramentas MCP — elas serão carregadas na próxima sessão',
       gatewayDisconnected: 'O gateway Hermes não está conectado'
     },
     tool: {
@@ -3373,7 +3386,42 @@ export const ptBrOverrides: TranslationOverrides = {
       title: 'Barra lateral',
       description: 'Exibe a barra lateral em dispositivos móveis.',
       toggle: open => `${open ? 'Mostrar' : 'Ocultar'} barra lateral`
-    }
+    },
+    openFullView: 'Abrir visualização completa',
+    zoomOut: 'Reduzir zoom',
+    resetView: 'Redefinir zoom',
+    zoomIn: 'Aumentar zoom',
+    close: 'Fechar',
+    copy: 'Copiar',
+    copied: 'Copiado',
+    moreActions: 'Mais ações',
+    searchEmoji: 'Pesquisar emoji…',
+    loadingEmoji: 'Carregando emojis…',
+    noEmojiFound: 'Nenhum emoji encontrado.',
+    moreEmoji: 'Mais emojis',
+    removeReaction: emoji => `Remover a reação ${emoji}`,
+    reactedByHermes: 'Reação do Hermes',
+    conversationTimeline: 'Linha do tempo da conversa',
+    hatchingProgress: 'Progresso da eclosão',
+    messagePlaceholder: 'Mensagem…',
+    openInHermes: 'Abrir no Hermes',
+    loadingMemoryProviderSettings: 'Carregando as configurações do provedor de memória…',
+    memoryProviderSettingsFailed: message =>
+      `Não foi possível carregar as configurações do provedor de memória: ${message}`,
+    retry: 'Tentar novamente',
+    dangerZone: 'Zona de perigo',
+    checkingInstalled: 'Verificando o que está instalado…',
+    confirmUninstall: 'Confirmar desinstalação',
+    thisRemoves: consequence => `Isto remove ${consequence}. Essa ação não pode ser desfeita.`,
+    yesUninstall: 'Sim, desinstalar',
+    uninstalling: 'Desinstalando…',
+    uninstallHermes: 'Desinstalar o Hermes',
+    uninstallDescription:
+      'Escolha o que deseja remover. O app será fechado para concluir; você poderá abrir o instalador novamente quando quiser.',
+    configSettings: label => `Configurações de ${label}`,
+    fieldSet: label => `${label} configurado`,
+    fieldNotSet: label => `${label} não configurado`,
+    fullConfig: 'Configuração completa…'
   }
 }
 
@@ -3439,9 +3487,11 @@ const ptBrSupplement: TranslationOverrides = {
         agentTargetRemote: profile => `Instala no backend remoto conectado “${profile}”`,
         desktopTarget: 'Instala na pasta local desktop-plugins deste aplicativo',
         desktopOnlyNote: 'Pacotes exclusivos do Desktop não instalam um plugin de agente no backend.',
-        insecureWarning: 'Esta URL usa um esquema inseguro ou local. Prefira https:// ou git@ para instalações de produção.',
+        insecureWarning:
+          'Esta URL usa um esquema inseguro ou local. Prefira https:// ou git@ para instalações de produção.',
         securityHeading: 'Antes de instalar',
-        securityIntro: 'Instale somente de fontes confiáveis — revise o repositório abaixo para ver o que será adicionado.',
+        securityIntro:
+          'Instale somente de fontes confiáveis — revise o repositório abaixo para ver o que será adicionado.',
         sourceHeading: 'Código-fonte',
         viewRepository: 'Ver repositório',
         viewPluginFiles: 'Ver arquivos do plugin',
@@ -3469,7 +3519,8 @@ const ptBrSupplement: TranslationOverrides = {
       sessionDensityCompact: 'Compacta',
       sessionDensityComfortable: 'Confortável',
       sessionDensityDetailed: 'Detalhada',
-      translucencyGlassDesc: 'Vidro fosco: o Desktop aparece como um desfoque suave enquanto o texto permanece nítido. Ajustado separadamente para os temas claro e escuro.',
+      translucencyGlassDesc:
+        'Vidro fosco: o Desktop aparece como um desfoque suave enquanto o texto permanece nítido. Ajustado separadamente para os temas claro e escuro.',
       translucencyModeClear: 'Transparente',
       translucencyModeGlass: 'Vidro',
       translucencyTintTitle: 'Tonalidade',
@@ -3489,23 +3540,28 @@ const ptBrSupplement: TranslationOverrides = {
       introSplashTitle: 'Tela de abertura',
       introSplashDesc: 'A marca e o prompt exibidos em um chat vazio.',
       composerPopoutTitle: 'Compositor flutuante',
-      composerPopoutDesc: 'Permitir arrastar o compositor para fora da área encaixada. Desative para mantê-lo preso na parte inferior.'
+      composerPopoutDesc:
+        'Permitir arrastar o compositor para fora da área encaixada. Desative para mantê-lo preso na parte inferior.'
     },
     about: {
       bundleOutOfSync: 'Build do aplicativo desatualizado',
-      bundleOutOfSyncDesc: 'O runtime do Hermes foi atualizado, mas o aplicativo Desktop ainda usa um build antigo — novos recursos da interface, como o Modo Bot, não aparecerão até que ele seja atualizado. Execute a atualização abaixo para reconstruir o aplicativo. Se o aviso continuar, reinstale usando o instalador Desktop mais recente.',
+      bundleOutOfSyncDesc:
+        'O runtime do Hermes foi atualizado, mas o aplicativo Desktop ainda usa um build antigo — novos recursos da interface, como o Modo Bot, não aparecerão até que ele seja atualizado. Execute a atualização abaixo para reconstruir o aplicativo. Se o aviso continuar, reinstale usando o instalador Desktop mais recente.',
       bundleOutOfSyncAction: 'Obter o instalador',
       updateReadyUnknown: 'Uma nova atualização está pronta.'
     },
     config: {
-      toolsetsWipeConfirm: 'Remover todos os conjuntos de ferramentas ativados? Isso desativa memória, terminal, busca na web, delegação e a maioria das outras ferramentas até que você as ative novamente.',
+      toolsetsWipeConfirm:
+        'Remover todos os conjuntos de ferramentas ativados? Isso desativa memória, terminal, busca na web, delegação e a maioria das outras ferramentas até que você as ative novamente.',
       disableF12Title: 'Desativar DevTools com F12',
       disableF12Desc: 'Impedir que F12 abra as Ferramentas do desenvolvedor. Ctrl+Shift+I continua funcionando.'
     },
     connections: {
       title: 'Gateways registrados',
-      intro: 'Gerencie este dispositivo e todos os gateways Hermes que ele pode alcançar por conexões remotas, SSH ou Cloud.',
-      stagedNote: 'Troque de gateway em Sessões. Perfis, chats, messaging e tarefas agendadas permanecem com seus gateways; o trabalho nos outros gateways continua.',
+      intro:
+        'Gerencie este dispositivo e todos os gateways Hermes que ele pode alcançar por conexões remotas, SSH ou Cloud.',
+      stagedNote:
+        'Troque de gateway em Sessões. Perfis, chats, messaging e tarefas agendadas permanecem com seus gateways; o trabalho nos outros gateways continua.',
       launchModeTitle: 'Na inicialização, voltar a Sessões no gateway usado por último',
       launchModeDesc: 'Quando desativado, Sessões abre no gateway Principal.',
       searchPlaceholder: 'Pesquisar gateways…',
@@ -3518,7 +3574,8 @@ const ptBrSupplement: TranslationOverrides = {
       editConnection: 'Editar',
       removeConnection: 'Remover',
       removeConfirmTitle: 'Remover esta conexão?',
-      removeConfirmDesc: label => `“${label}” será removida deste aplicativo. A instância em si não será alterada — você poderá adicioná-la novamente quando quiser.`,
+      removeConfirmDesc: label =>
+        `“${label}” será removida deste aplicativo. A instância em si não será alterada — você poderá adicioná-la novamente quando quiser.`,
       makePrimary: 'Tornar principal',
       testConnection: 'Testar',
       testOk: 'Acessível',
@@ -3539,12 +3596,14 @@ const ptBrSupplement: TranslationOverrides = {
       kindCloudDesc: 'Uma instância hospedada descoberta pela sua conta Hermes Cloud.',
       kindSshDesc: 'Uma instalação do Hermes acessada por SSH.',
       labelTitle: 'Nome',
-      labelDesc: 'Obrigatório. Exibido em todos os lugares onde esta instância aparece; deve ser exclusivo, por exemplo “Homelab” ou “Notebook de trabalho”.',
+      labelDesc:
+        'Obrigatório. Exibido em todos os lugares onde esta instância aparece; deve ser exclusivo, por exemplo “Homelab” ou “Notebook de trabalho”.',
       labelPlaceholder: 'Homelab',
       urlTitle: 'URL do gateway',
       sshHostTitle: 'Host SSH',
       headersTitle: 'Cabeçalhos extras do gateway',
-      headersDesc: 'Enviados com cada solicitação HTTP e WebSocket para este gateway — por exemplo, para proxies de acesso. Os cabeçalhos gerenciados pelo Hermes são ignorados. Os valores são armazenados criptografados.',
+      headersDesc:
+        'Enviados com cada solicitação HTTP e WebSocket para este gateway — por exemplo, para proxies de acesso. Os cabeçalhos gerenciados pelo Hermes são ignorados. Os valores são armazenados criptografados.',
       headerValuePlaceholder: 'Valor',
       headerValueSaved: 'Salvo — deixe em branco para manter',
       headerAdd: 'Adicionar cabeçalho',
@@ -3554,7 +3613,8 @@ const ptBrSupplement: TranslationOverrides = {
       duplicateSsh: label => `Já existe uma conexão com este host SSH (“${label}”).`,
       sameBackendHint: label => `Mesmo backend que “${label}”`,
       localAddHint: 'O modo local está indisponível: a conexão local gerenciada já existe.',
-      cloudAddHint: 'Dica: entrar no Hermes Cloud acima descobre seus agentes automaticamente — use este formulário apenas para registrar manualmente uma URL conhecida.',
+      cloudAddHint:
+        'Dica: entrar no Hermes Cloud acima descobre seus agentes automaticamente — use este formulário apenas para registrar manualmente uma URL conhecida.',
       save: 'Salvar conexão',
       saving: 'Salvando…',
       cancel: 'Cancelar',
@@ -3573,10 +3633,13 @@ const ptBrSupplement: TranslationOverrides = {
       usage30d: value => `${value} usos/30 dias`,
       unusedPill: 'não usado',
       deepLinkTitle: 'Adicionar servidor MCP?',
-      deepLinkDescription: 'Um link solicitou a adição deste servidor MCP ao Hermes. Revise a configuração exata abaixo — ela vem do link, não do Hermes.',
-      deepLinkStdioWarning: 'Este servidor executa um processo local na sua máquina com o comando mostrado abaixo. Continue somente se confiar na origem.',
+      deepLinkDescription:
+        'Um link solicitou a adição deste servidor MCP ao Hermes. Revise a configuração exata abaixo — ela vem do link, não do Hermes.',
+      deepLinkStdioWarning:
+        'Este servidor executa um processo local na sua máquina com o comando mostrado abaixo. Continue somente se confiar na origem.',
       deepLinkConfirm: 'Adicionar servidor',
-      deepLinkNameInvalid: 'Os nomes devem ter de 1 a 64 caracteres, formados por letras, números, pontos, hífens ou sublinhados.',
+      deepLinkNameInvalid:
+        'Os nomes devem ter de 1 a 64 caracteres, formados por letras, números, pontos, hífens ou sublinhados.',
       deepLinkNameConflict: name => `Já existe um servidor chamado ${name} — escolha outro nome ou cancele.`,
       deepLinkErrorTitle: 'Link de instalação MCP rejeitado',
       deepLinkErrorName: 'O nome do servidor no link está ausente ou é inválido.',
@@ -3598,7 +3661,8 @@ const ptBrSupplement: TranslationOverrides = {
       pickerTitle: 'Skills Hub',
       pickerBrowse: 'Explorar o hub completo',
       pickerHide: 'Ocultar navegador do hub',
-      pickerHint: 'Clique em “+ Adicionar a este agente” em qualquer skill — ela será instalada e aparecerá na lista acima.'
+      pickerHint:
+        'Clique em “+ Adicionar a este agente” em qualquer skill — ela será instalada e aparecerá na lista acima.'
     }
   },
   commandCenter: {
@@ -3618,7 +3682,8 @@ const ptBrSupplement: TranslationOverrides = {
       cron: 'Tarefas agendadas'
     },
     projects: {
-      worktreeStaleBackend: 'Atualize o backend Hermes para criar worktrees nesta conexão remota — ele é anterior à API de worktrees do Git.'
+      worktreeStaleBackend:
+        'Atualize o backend Hermes para criar worktrees nesta conexão remota — ele é anterior à API de worktrees do Git.'
     },
     messageCount: count => `${count} ${count === 1 ? 'mensagem' : 'mensagens'}`,
     toolCallCount: count => `${count} ${count === 1 ? 'chamada de ferramenta' : 'chamadas de ferramenta'}`,
@@ -3650,10 +3715,13 @@ const ptBrSupplement: TranslationOverrides = {
   },
   updates: {
     blockerTitle: 'Fechar previews locais para atualizar o Hermes?',
-    blockerBody: 'O Hermes precisa parar estes previews locais antes de atualizar. Seus arquivos não serão modificados nem excluídos.',
+    blockerBody:
+      'O Hermes precisa parar estes previews locais antes de atualizar. Seus arquivos não serão modificados nem excluídos.',
     foreignBlockerTitle: 'Fechar outros processos para atualizar o Hermes',
-    foreignBlockerBody: 'O Hermes não pode fechar estes processos com segurança. Feche o aplicativo, terminal ou serviço responsável por cada um e tente atualizar novamente.',
-    mixedBlockerBody: 'O Hermes pode fechar os previews locais listados abaixo. Outros processos precisam ser fechados manualmente antes de continuar.',
+    foreignBlockerBody:
+      'O Hermes não pode fechar estes processos com segurança. Feche o aplicativo, terminal ou serviço responsável por cada um e tente atualizar novamente.',
+    mixedBlockerBody:
+      'O Hermes pode fechar os previews locais listados abaixo. Outros processos precisam ser fechados manualmente antes de continuar.',
     closePreviewsAndUpdate: 'Fechar previews e atualizar',
     closePreviewsAndCheckAgain: 'Fechar previews e verificar novamente',
     localPreview: 'Preview local',
@@ -3668,7 +3736,8 @@ const ptBrSupplement: TranslationOverrides = {
   },
   preview: {
     web: {
-      remoteLoopback: 'Este endereço aponta para a máquina que executa seu agente, não para esta máquina. O painel de navegador carrega páginas localmente; um servidor remoto precisa de encaminhamento de porta ou de um host acessível.',
+      remoteLoopback:
+        'Este endereço aponta para a máquina que executa seu agente, não para esta máquina. O painel de navegador carrega páginas localmente; um servidor remoto precisa de encaminhamento de porta ou de um host acessível.',
       goBack: 'Voltar',
       goForward: 'Avançar',
       reload: 'Recarregar página',
@@ -3681,7 +3750,8 @@ const ptBrSupplement: TranslationOverrides = {
     showStripTab: title => `Mostrar ${title}`,
     hideStripTab: title => `Ocultar ${title}`,
     lastTabKeptTitle: 'A última aba permanece',
-    lastTabKeptBody: 'Esta zona precisa de pelo menos uma aba visível. Mostre outra aba primeiro ou recolha a barra lateral inteira.',
+    lastTabKeptBody:
+      'Esta zona precisa de pelo menos uma aba visível. Mostre outra aba primeiro ou recolha a barra lateral inteira.',
     toggleStripTab: title => `Alternar aba ${title}`
   },
   contextMenu: {

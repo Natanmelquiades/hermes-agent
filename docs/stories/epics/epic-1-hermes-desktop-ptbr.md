@@ -1,13 +1,13 @@
 # Epic 1 — Hermes Desktop: Português (Brasil) oficial
 
 > **Epic ID:** EPIC-1
-> **Status:** Done with CONCERNS — entrega local; publicação upstream bloqueada
+> **Status:** In Progress — Story 1.7 de cobertura visual; publicação upstream bloqueada
 > **Produto:** Hermes Desktop
 > **Plataforma de validação:** Windows
 > **Locale:** `pt-br`
 > **Fonte:** `docs/prd/hermes-desktop-pt-br-prd.md`
 > **Backlog:** `docs/backlog/hermes-desktop-pt-br-backlog-map.md`
-> **Remote writes:** desabilitadas; entrega local até revisão explícita
+> **Remote writes:** checkpoint publicado no fork pessoal; repositório oficial sem PR/merge
 
 ## Objetivo
 
@@ -29,6 +29,7 @@ O catálogo pt-BR precisa ser construído contra o contrato `Translations` da `m
 | 1.4 | Testes de i18n, fallback e persistência | @dev | @architect | 1.3 | Ready |
 | 1.5 | Aceitação do Desktop no Windows | @dev | @architect | 1.4 | Ready |
 | 1.6 | Preparação da entrega upstream local | @devops | @architect | 1.5 | Ready |
+| 1.7 | Cobertura visual e migração de strings de interface pt-BR | @dev | @qa | 1.6 | InProgress |
 
 ## Waves
 
@@ -41,6 +42,7 @@ Wave 2: 1.3 — catálogo pt-BR
 Wave 3: 1.4 — testes
 Wave 4: 1.5 — aceitação Windows
 Wave 5: 1.6 — entrega local e relatório upstream
+Wave 6: 1.7 — cobertura visual e strings hardcoded
 ```
 
 ## Riscos principais
@@ -60,9 +62,9 @@ Wave 5: 1.6 — entrega local e relatório upstream
 - [x] Typecheck e lint passam no checkout final.
 - [x] Testes Desktop relevantes passam ou falhas preexistentes estão isoladas e documentadas.
 - [x] Aceitação manual Windows concluída no renderer isolado, com CONCERNS de backend E2E.
-- [x] Nenhum push, PR ou merge remoto foi feito automaticamente.
+- [x] Nenhum PR ou merge no repositório oficial foi feito; o checkpoint foi publicado no fork pessoal após autorização explícita.
 - [x] Entrega local contém diff, testes, decisões e instruções de revisão.
 
 ## Handoff
 
-Após a conclusão do épico, @devops poderá preparar uma contribuição upstream, mas a publicação remota permanece uma decisão separada do usuário.
+Após a conclusão da Story 1.7, @devops poderá preparar uma contribuição upstream. O checkpoint do fork não substitui revisão visual nem autorização para abrir PR no repositório oficial.
